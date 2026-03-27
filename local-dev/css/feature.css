@@ -1,0 +1,187 @@
+/* Scoped: feature.css | Wrapper: #anniv100th | 2026/3/27 10:55:35 */
+/* feature.css: Feature（強み）セクション固有のスタイル */
+
+#anniv100th .feature-section {
+
+    background-color: var(--bg-color);
+    padding-bottom: 200px; /* RECRUITセクションとの重なり分、余白を広げてコンテンツを保護 */
+}
+
+
+#anniv100th .feature-grid {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+    margin-top: 4rem;
+}
+
+
+/* Feature Card */
+#anniv100th .feature-card {
+
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: transform var(--transition-slow), box-shadow var(--transition-slow);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+
+#anniv100th .feature-card:hover {
+
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 40, 150, 0.1); /* プライマリーカラーを少し混ぜた影 */
+}
+
+
+/* 中央のカードを少し下げる（動きのあるレイアウト）のスタイルは削除されました */
+
+#anniv100th .feature-image-wrapper {
+
+    position: relative;
+    height: 240px;
+    overflow: hidden;
+}
+
+
+#anniv100th .feature-image-placeholder {
+
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.8s ease;
+}
+
+
+#anniv100th .feature-card:hover .feature-image-placeholder {
+
+    transform: scale(1.05);
+}
+
+
+/* モックアップ用の背景色設定 */
+#anniv100th .gauze-bg {
+
+    background-color: #f0f0f0;
+    /* 繊維を思わせる薄いパターンやグラデーション */
+    background-image: linear-gradient(45deg, #f5f5f5 25%, #eeeeee 25%, #eeeeee 50%, #f5f5f5 50%, #f5f5f5 75%, #eeeeee 75%, #eeeeee 100%);
+    background-size: 20px 20px;
+}
+
+
+#anniv100th .down-bg {
+
+    background-color: #e8f0f8;
+    background-image: radial-gradient(#d0e0f0 10%, transparent 11%), radial-gradient(#d0e0f0 10%, transparent 11%);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+}
+
+
+#anniv100th .oem-bg {
+
+    background-color: #e6e6e6;
+    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 64, 152, 0.05) 25%, rgba(0, 64, 152, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 64, 152, 0.05) 75%, rgba(0, 64, 152, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 64, 152, 0.05) 25%, rgba(0, 64, 152, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 64, 152, 0.05) 75%, rgba(0, 64, 152, 0.05) 76%, transparent 77%, transparent);
+    background-size: 40px 40px;
+}
+
+
+#anniv100th .feature-icon {
+
+    position: absolute;
+    bottom: 20px; /* 見切れないように要素内に完全に収める */
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--primary-color);
+    color: var(--text-white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    font-family: Georgia, serif;
+    box-shadow: 0 5px 15px rgba(0, 64, 152, 0.3);
+    z-index: 2;
+    transition: background-color var(--transition-fast);
+}
+
+
+#anniv100th .feature-card:hover .feature-icon {
+
+    background-color: var(--secondary-color);
+    box-shadow: 0 5px 15px rgba(240, 131, 0, 0.3);
+}
+
+
+#anniv100th .feature-content {
+
+    padding: 3rem 2rem 2rem;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#anniv100th .feature-title {
+
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+
+#anniv100th .feature-description {
+
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+}
+
+
+#anniv100th .feature-cta {
+
+    margin-top: 5rem;
+    text-align: center;
+}
+
+
+#anniv100th .btn-large {
+
+    padding: 1.2rem 3rem;
+    font-size: 1.1rem;
+    border-radius: 50px; /* 特殊なCTAなので丸みを強くする */
+}
+
+
+/* レスポンシブ対応 */
+@media (max-width: 992px) {
+
+    #anniv100th .feature-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 768px) {
+
+    #anniv100th .feature-grid {
+
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 3rem;
+    }
+
+}
+

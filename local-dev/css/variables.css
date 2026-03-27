@@ -1,0 +1,36 @@
+/* Scoped: variables.css | Wrapper: #anniv100th | 2026/3/27 10:55:34 */
+/* variables.css: デザインシステムの定義 */
+#anniv100th {
+
+    /* Colors */
+    --primary-color: #004098; /* Navy - 信頼・誠実 */
+    --secondary-color: #f08300; /* Orange - 活気・親近感 */
+    --accent-color: #8e0000; /* Deep Red - 伝統・情熱 */
+    
+    --text-main: #333333;
+    --text-light: #666666;
+    --text-white: #ffffff;
+    
+    --bg-color: #ffffff;
+    --bg-light: #f5f5f5;
+    --bg-dark: #1a1a1a;
+    
+    /* Typography */
+    --font-family-base: 'Noto Sans JP', '游ゴシック体', 'Yu Gothic', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    --font-family-serif: 'Noto Serif JP', '游明朝体', 'Yu Mincho', 'YuMincho', 'MS P明朝', 'MS PMincho', serif;
+    
+    /* Layout */
+    --container-width: 1200px;
+    --container-padding: 0 5%;
+    
+    /* Transitions */
+    --transition-fast: 0.3s ease;
+    --transition-slow: 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    
+    /* Z-index layers */
+    --z-background: -1;
+    --z-content: 1;
+    --z-header: 100;
+    --z-modal: 1000;
+}
+

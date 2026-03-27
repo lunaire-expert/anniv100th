@@ -1,0 +1,11 @@
+{
+  "name": "lunaire-100th-lp",
+  "version": "1.0.0",
+  "description": "100周年記念LP",
+  "scripts": {
+    "dev": "browser-sync start --server --port 3000 --files \"**/*\""
+  },
+  "devDependencies": {
+    "browser-sync": "^3.0.0"
+  }
+}
