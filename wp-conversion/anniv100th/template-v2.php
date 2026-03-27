@@ -140,7 +140,7 @@
             <section class="hero hero-bright-ver" id="hero">
                 <div class="hero-background">
                     <video class="hero-video" autoplay muted loop playsinline>
-                        <source src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/hero-bg2.mp4" type="video/mp4">
+                        <source src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/videos/hero-bg2.mp4" type="video/mp4">
                     </video>
                     <div class="hero-image-overlay"></div>
                     <canvas id="hero-particles"></canvas>

@@ -22,7 +22,7 @@ function convertToWPTemplate(html, templateName) {
 
     // 3. ビデオパスの置換
     // src="videos/..." -> .../anniv100th/videos/...
-    content = content.replace(/src="videos\//g, `src="${wpPathPrefix}/images/`); // images 内に videos がある場合も考慮
+    content = content.replace(/src="videos\//g, `src="${wpPathPrefix}/videos/`);
 
     // 4. インラインスタイルの背景画像
     // url('images/...') -> url('.../anniv100th/images/...')

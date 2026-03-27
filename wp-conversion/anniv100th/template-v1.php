@@ -54,7 +54,7 @@
                 <div class="hero-background">
                     <!-- 背景動画: autoplay/muted/loop/playsinline（スマホ対応） -->
                     <video class="hero-video" autoplay muted loop playsinline>
-                        <source src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/hero-bg.mp4" type="video/mp4">
+                        <source src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/videos/hero-bg.mp4" type="video/mp4">
                     </video>
                     <!-- オーバーレイ: 動画の色調調整とテキストの可読性向上用 -->
                     <div class="hero-image-overlay"></div>
