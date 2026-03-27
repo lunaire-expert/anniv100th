@@ -1,44 +1,47 @@
-# 100周年記念LP プロジェクト構造定義書 (Handover Guide)
+# 100周年記念LP プロジェクト構造定義書 (Maintenance Guide)
 
-このドキュメントは、株式会社ルナール100周年記念LPのWordPress実装構造を解説するものです。後任のエンジニア・デザイナーは、修正や拡張の際にまずここを参照してください。
+このドキュメントは、株式会社ルナール100周年記念LPの管理・保守のための構造を解説したものです。
 
-## 1. ディレクトリ構造の役割
-WordPressテーマ（子テーマ）内での配置ルールです。
+## 1. 全体ディレクトリ構造
 
 ```text
-/themes/onepress-child/
-  ├── assets/
-  │    ├── css/
-  │    │    └── 100th/
-  │    │          └── 100th-anniversary.css  // [主力] 全セクションの統合スタイル
-  │    ├── images/
-  │    │    └── 100th/
-  │    │          ├── logos/             // 記念ロゴ、アイコン類
-  │    │          └── (img-files...)     // 背景画像、年表用写真
-  │    └── videos/
-  │         └── 100th/
-  │               └── hero-bg.mp4        // Heroセクション全画面動画
+/Users/lunaire/Desktop/100th/
+  ├── local-dev/             // [開発環境] 最新の HTML/CSS/画像/動画
+  │    ├── css/               // スコープ化済み CSS
+  │    ├── images/            // 静止画・SVG
+  │    ├── videos/            // 動画ファイル
+  │    ├── index.html         // Standard 版のソース
+  │    └── index_2.html       // Zzz Ver. のソース
   │
-  ├── page-100th-anniversary-v1.php      // [テンプレート] 光の粒デザイン
-  └── page-100th-anniversary-v2.php      // [テンプレート] Zzz泡デザイン
+  ├── wp-conversion/         // [WordPress 配布用]
+  │    ├── anniv100th/        // WordPress サーバーへそのままアップロードするフォルダ
+  │    │    ├── css/          // WordPress 用パス置換済み CSS
+  │    │    ├── images/       // WordPress 用アセット
+  │    │    ├── videos/       // WordPress 用動画
+  │    │    ├── template-v1.php // Standard 版のテンプレート
+  │    │    └── template-v2.php // Zzz Ver. のテンプレート
+  │    ├── README.md          // WordPress 導入ガイド
+  │    └── STRUCTURE.md       // 本ドキュメント
+  │
+  ├── sync-wp.js              // [ツール] CSS のスコープ化 (local-dev へ反映 & 同期)
+  └── generate-wp-templates.js // [ツール] HTML から PHP テンプレートへの自動変換
 ```
 
 ## 2. 実装の設計方針
-*   **スタンドアロン設計**: 
-    既存テーマ（OnePress）のCSS干渉を避けるため、`get_header()` を呼ばず、テンプレート内に独自の `<head>` と `<body>` を持っています。
-*   **アセット読み込み**: 
-    画像やCSSのパスは `get_stylesheet_directory_uri()` を使用して動的に取得しています。環境移行（テスト→本番）時にパスを書き換える必要はありません。
-*   **アニメーション**: 
-    *   `hero-particles`: Canvas APIによる軽量アニメーション。
-    *   `IntersectionObserver`: スクロール連動のフェードイン処理。
+- **CSSスコープ化**: 
+  既存テーマとの干渉を避けるため、全スタイルを `#anniv100th` IDでラップしています。`sync-wp.js` で自動生成されます。
+- **アセットパス解決**: 
+  WordPress テンプレート内では `get_stylesheet_directory_uri()` を使用して動的にパスを取得しています。
+- **動画再生の最適化**: 
+  `videos/` フォルダを独立させ、各テンプレートから確実に参照されるよう構成。
 
-## 3. よくある修正のガイド
-*   **文言の修正**: 
-    各PHPテンプレート（`page-100th-anniversary-v1.php`など）のHTML文言を直接編集してください。
-*   **色・スタイルの修正**: 
-    `100th-anniversary.css` の冒頭にある `:root` 変数、または各セクションのクラスを編集してください。
-*   **画像・動画の差し替え**: 
-    `assets/images/100th/` または `assets/videos/100th/` 内の同名ファイルを上書きするか、PHPテンプレート内のパスを書き換えてください。
+## 3. 編集・更新フロー
+1. **内容の編集**: 
+   `local-dev/` 内の `index.html` や `css/*.css` を直接編集します。
+2. **反映**: 
+   CSS を編集した場合は、`sync-wp.js` を実行してスコープ化を更新します。
+3. **WordPress パッケージの更新**: 
+   `generate-wp-templates.js` を実行すると、`local-dev` の変更が自動的に `wp-conversion/anniv100th/` 内の PHP テンプレートへ反映されます。
 
 ---
-2026.03.23 作成
+2026.03.27 更新

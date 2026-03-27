@@ -12,9 +12,9 @@ function convertToWPTemplate(html, templateName) {
 `;
     let content = html;
 
-    // 1. CSS パスの置換 (scoped ディレクトリを参照するように)
-    // <link rel="stylesheet" href="css/global.css"> -> .../anniv100th/css/scoped/global.css
-    content = content.replace(/href="css\//g, `href="${wpPathPrefix}/css/scoped/`);
+    // 1. CSS パスの置換
+    // <link rel="stylesheet" href="css/global.css"> -> .../anniv100th/css/global.css
+    content = content.replace(/href="css\//g, `href="${wpPathPrefix}/css/`);
 
     // 2. 画像パスの置換
     // src="images/..." -> .../anniv100th/images/...

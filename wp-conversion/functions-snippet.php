@@ -12,7 +12,7 @@ function enqueue_lunaire_100th_assets() {
     // LPの固定ページのスラッグを指定（例: '100th-anniversary'）
     if ( is_page( array( '100th-anniversary', '100th-anniversary-zzz' ) ) ) {
         
-        $base_url = get_stylesheet_directory_uri() . '/anniv100th/css/scoped/';
+        $base_url = get_stylesheet_directory_uri() . '/anniv100th/css/';
         
         // CSSの読み込み (代表的なものを登録)
         wp_enqueue_style( 'anniv100th-variables', $base_url . 'variables.css', array(), '1.1.0' );

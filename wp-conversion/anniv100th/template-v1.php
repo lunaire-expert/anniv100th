@@ -20,13 +20,13 @@
         rel="stylesheet">
 
     <!-- CSS (スコープ化済み個別ファイル) -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/scoped/variables.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/scoped/global.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/scoped/hero.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/scoped/timeline.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/scoped/feature.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/scoped/recruitment.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/scoped/vision.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/variables.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/global.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/hero.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/timeline.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/feature.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/recruitment.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/vision.css">
 </head>
 
 <body>
