@@ -1,6 +1,8 @@
+/* Scoped: variables.css | Wrapper: #anniv100th | 2026/3/27 17:03:06 */
 /* Scoped: variables.css | Wrapper: #anniv100th | 2026/3/27 10:55:34 */
 /* variables.css: デザインシステムの定義 */
 #anniv100th {
+
 
     /* Colors */
     --primary-color: #004098; /* Navy - 信頼・誠実 */
@@ -33,4 +35,5 @@
     --z-header: 100;
     --z-modal: 1000;
 }
+
 

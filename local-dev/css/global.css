@@ -211,3 +211,17 @@ body {
     }
 
 }
+
+/* Animation: Fade In Up
+   -------------------------------------------------------------------------- */
+#anniv100th .fade-in-up {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1.6s ease-out, transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+    will-change: opacity, transform;
+}
+
+#anniv100th .fade-in-up.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

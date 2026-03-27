@@ -2,7 +2,6 @@
 /* feature.css: Feature（強み）セクション固有のスタイル */
 
 #anniv100th .feature-section {
-
     background-color: var(--bg-color);
     padding-bottom: 200px; /* RECRUITセクションとの重なり分、余白を広げてコンテンツを保護 */
 }

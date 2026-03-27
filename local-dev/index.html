@@ -86,11 +86,11 @@
             <section id="message" class="message-section"
                 style="padding: 100px 0; background: var(--bg-color); text-align: center;">
                 <div class="container">
-                    <h2
+                    <h2 class="fade-in-up"
                         style="font-family: var(--font-family-serif); font-size: 2.5rem; margin-bottom: 2rem; letter-spacing: 0.1em; color: var(--primary-color);">
                         感謝を込めて、次の100年へ。
                     </h2>
-                    <div
+                    <div class="fade-in-up"
                         style="max-width: 800px; margin: 0 auto; line-height: 2; color: var(--text-main); font-size: 1.1rem;">
                         おかげさまで株式会社ルナールは創立100周年を迎えました。<br>
                         大正14年の創業以来、私たちは「眠りの質」を追求し続けてきました。<br>
@@ -135,7 +135,7 @@
                         <div class="timeline-line"></div>
 
                         <!-- Timeline Item 1 -->
-                        <div class="timeline-item left">
+                        <div class="timeline-item left fade-in-up">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-year">1925<span>年</span></div>
@@ -148,7 +148,7 @@
                         </div>
 
                         <!-- Timeline Item 2 -->
-                        <div class="timeline-item right">
+                        <div class="timeline-item right fade-in-up">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-year">1962<span>年</span></div>
@@ -159,7 +159,7 @@
                         </div>
 
                         <!-- Timeline Item 3 -->
-                        <div class="timeline-item left">
+                        <div class="timeline-item left fade-in-up">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-year">平成期<span>〜</span></div>
@@ -172,7 +172,7 @@
                         </div>
 
                         <!-- Timeline Item 4 -->
-                        <div class="timeline-item right">
+                        <div class="timeline-item right fade-in-up">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-year">現在<span>そして未来へ</span></div>
@@ -195,7 +195,7 @@
 
                     <div class="feature-grid">
                         <!-- Feature Card 1 -->
-                        <div class="feature-card">
+                        <div class="feature-card fade-in-up">
                             <div class="feature-image-wrapper">
                                 <!-- ガーゼのテクスチャ画像のモック -->
                                 <div class="feature-image-placeholder gauze-bg"></div>
@@ -213,7 +213,7 @@
                         </div>
 
                         <!-- Feature Card 2 -->
-                        <div class="feature-card">
+                        <div class="feature-card fade-in-up">
                             <div class="feature-image-wrapper">
                                 <!-- ダウンのテクスチャ画像のモック -->
                                 <div class="feature-image-placeholder down-bg"></div>
@@ -230,7 +230,7 @@
                         </div>
 
                         <!-- Feature Card 3 -->
-                        <div class="feature-card">
+                        <div class="feature-card fade-in-up">
                             <div class="feature-image-wrapper">
                                 <!-- OEMフローの画像のモック -->
                                 <div class="feature-image-placeholder oem-bg"></div>
@@ -277,12 +277,12 @@
             <section id="vision" class="vision-section section-padding">
                 <div class="vision-background"></div>
                 <div class="container vision-content">
-                    <div class="vision-badge">OUR PROMISE</div>
-                    <h2 class="vision-title">
+                    <div class="vision-badge fade-in-up">OUR PROMISE</div>
+                    <h2 class="vision-title fade-in-up">
                         「寝る道具」から、<br>
                         「健康を実現する環境」へ。
                     </h2>
-                    <div class="vision-text">
+                    <div class="vision-text fade-in-up">
                         <p>
                             創業以来、私たちはひたむきに「質の高い寝具」を追求してきました。<br>
                             しかし、時代とともに人々のライフスタイルが変化する中、睡眠に求められる役割も「ただ休息をとる」ことから、「心身の健康を維持し、明日への活力を生み出す」ことへと大きく進化しています。
@@ -293,7 +293,7 @@
                             妥協なきプロフェッショナルとして、新しい睡眠の未来へ向かって。
                         </p>
                     </div>
-                    <div class="vision-cta-wrapper">
+                    <div class="vision-cta-wrapper fade-in-up">
                         <a href="https://lunaire.co.jp/contact.html" class="btn btn-accent">お問い合わせ・ご相談</a>
                         <a href="https://lunaire.co.jp/" class="btn btn-outline">コーポレートサイトトップへ</a>
                     </div>
@@ -334,10 +334,14 @@
                             entry.target.classList.add('is-visible');
                         }
                     });
-                }, { threshold: 0.2 });
+                }, { 
+                    threshold: 0.15,
+                    rootMargin: '0px 0px -50px 0px' // 画面下から50px入ったところで検知
+                });
 
-                const recruitSection = document.querySelector('.recruitment-section');
-                if (recruitSection) observer.observe(recruitSection);
+                // 監視対象の登録（リクルートセクション + フェードイン要素）
+                const animatedElements = document.querySelectorAll('.recruitment-section, .fade-in-up');
+                animatedElements.forEach(el => observer.observe(el));
 
                 /** 
                  * Heroセクション: 光の粒子（スターバースト風）アニメーション
@@ -504,10 +508,15 @@
                                 layers[0].style.opacity = 0;
                                 layers[1].style.opacity = 1; // 成長
                                 layers[2].style.opacity = 0;
-                            } else {
+                            } else if (progress < 0.85) {
                                 layers[0].style.opacity = 0;
                                 layers[1].style.opacity = 0;
                                 layers[2].style.opacity = 1; // 未来
+                            } else {
+                                // 次のセクションが見えてくる頃には全て透明にする
+                                layers[0].style.opacity = 0;
+                                layers[1].style.opacity = 0;
+                                layers[2].style.opacity = 0;
                             }
                         }
                     });

@@ -187,11 +187,7 @@ function scopeCSS(css) {
 function scopeIndividualFiles() {
     try {
         const cssBaseDir = path.join(targetDir, 'css');
-        const scopedDir = path.join(cssBaseDir, 'scoped');
-
-        if (!fs.existsSync(scopedDir)) {
-            fs.mkdirSync(scopedDir, { recursive: true });
-        }
+        const scopedDir = cssBaseDir; // 直下に出力
 
         const cssFiles = [
             'variables.css',
@@ -212,13 +208,13 @@ function scopeIndividualFiles() {
                 const scoped = header + scopeCSS(content);
                 const outputPath = path.join(scopedDir, file);
                 fs.writeFileSync(outputPath, scoped);
-                console.log(`  -> css/scoped/${file}`);
+                console.log(`  -> css/${file}`);
             } else {
                 console.warn(`Warning: ${file} not found, skipped.`);
             }
         });
 
-        console.log('\nDone: css/scoped/ に個別スコープ済みCSSを出力しました。');
+        console.log('\nDone: css/ に個別スコープ済みCSSを出力しました。');
     } catch (err) {
         console.error('Error:', err.message);
         console.error(err.stack);

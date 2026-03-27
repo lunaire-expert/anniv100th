@@ -174,11 +174,11 @@
             <section id="message" class="message-section"
                 style="padding: 100px 0; background: var(--bg-color); text-align: center;">
                 <div class="container">
-                    <h2
+                    <h2 class="fade-in-up"
                         style="font-family: var(--font-family-serif); font-size: 2.5rem; margin-bottom: 2rem; letter-spacing: 0.1em; color: var(--primary-color);">
                         感謝を込めて、次の100年へ。
                     </h2>
-                    <div
+                    <div class="fade-in-up"
                         style="max-width: 800px; margin: 0 auto; line-height: 2; color: var(--text-main); font-size: 1.1rem;">
                         おかげさまで株式会社ルナールは創立100周年を迎えました。<br>
                         大正14年の創業以来、私たちは「眠りの質」を追求し続けてきました。<br>
@@ -215,7 +215,7 @@
 
                     <div class="timeline-container">
                         <div class="timeline-line"></div>
-                        <div class="timeline-item left">
+                        <div class="timeline-item left fade-in-up">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-year">1925<span>年</span></div>
@@ -225,7 +225,7 @@
                                 <div class="timeline-image-placeholder">創業時の写真</div>
                             </div>
                         </div>
-                        <div class="timeline-item right">
+                        <div class="timeline-item right fade-in-up">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-year">1962<span>年</span></div>
@@ -233,7 +233,7 @@
                                 <p class="timeline-text">事業を法人化し、株式会社として設立。本社機能を大阪市へ移転するとともに、寝具専門店などを中心とした流通網を大きく拡充。</p>
                             </div>
                         </div>
-                        <div class="timeline-item left">
+                        <div class="timeline-item left fade-in-up">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-year">平成期<span>〜</span></div>
@@ -242,7 +242,7 @@
                                 <div class="timeline-image-placeholder">工場での製造風景</div>
                             </div>
                         </div>
-                        <div class="timeline-item right">
+                        <div class="timeline-item right fade-in-up">
                             <div class="timeline-dot"></div>
                             <div class="timeline-content">
                                 <div class="timeline-year">現在<span>そして未来へ</span></div>
@@ -262,7 +262,7 @@
                         <p class="section-subtitle">ルナールの強みと、未来への約束</p>
                     </div>
                     <div class="feature-grid">
-                        <div class="feature-card">
+                        <div class="feature-card fade-in-up">
                             <div class="feature-image-wrapper">
                                 <div class="feature-image-placeholder gauze-bg"></div>
                                 <div class="feature-icon"><span>01</span></div>
@@ -272,7 +272,7 @@
                                 <p class="feature-description">高品質なガーゼやダウンをはじめとする厳選素材を活かし、熟練の技術で快適さを追求しています。</p>
                             </div>
                         </div>
-                        <div class="feature-card">
+                        <div class="feature-card fade-in-up">
                             <div class="feature-image-wrapper">
                                 <div class="feature-image-placeholder down-bg"></div>
                                 <div class="feature-icon"><span>02</span></div>
@@ -282,7 +282,7 @@
                                 <p class="feature-description">時代とともに変化するライフスタイルを汲み取り、新しい睡眠環境のアイデアを提案します。</p>
                             </div>
                         </div>
-                        <div class="feature-card">
+                        <div class="feature-card fade-in-up">
                             <div class="feature-image-wrapper">
                                 <div class="feature-image-placeholder oem-bg"></div>
                                 <div class="feature-icon"><span>03</span></div>
@@ -322,12 +322,12 @@
             <section id="vision" class="vision-section section-padding">
                 <div class="vision-background"></div>
                 <div class="container vision-content">
-                    <div class="vision-badge">OUR PROMISE</div>
-                    <h2 class="vision-title">
+                    <div class="vision-badge fade-in-up">OUR PROMISE</div>
+                    <h2 class="vision-title fade-in-up">
                         「寝る道具」から、<br>
                         「健康を実現する環境」へ。
                     </h2>
-                    <div class="vision-text">
+                    <div class="vision-text fade-in-up">
                         <p>
                             創業以来、私たちはひたむきに「質の高い寝具」を追求してきました。<br>
                             しかし、時代とともに人々のライフスタイルが変化する中、睡眠に求められる役割も「ただ休息をとる」ことから、「心身の健康を維持し、明日への活力を生み出す」ことへと大きく進化しています。
@@ -338,7 +338,7 @@
                             妥協なきプロフェッショナルとして、新しい睡眠の未来へ向かって。
                         </p>
                     </div>
-                    <div class="vision-cta-wrapper">
+                    <div class="vision-cta-wrapper fade-in-up">
                         <a href="https://lunaire.co.jp/contact.html" class="btn btn-accent">お問い合わせ・ご相談</a>
                         <a href="https://lunaire.co.jp/" class="btn btn-outline">コーポレートサイトトップへ</a>
                     </div>
@@ -381,10 +381,14 @@
                             entry.target.classList.add('is-visible');
                         }
                     });
-                }, { threshold: 0.2 });
+                }, { 
+                    threshold: 0.15,
+                    rootMargin: '0px 0px -50px 0px'
+                });
 
-                const recruitSection = document.querySelector('.recruitment-section');
-                if (recruitSection) observer.observe(recruitSection);
+                // 監視対象の登録（リクルートセクション + フェードイン要素）
+                const animatedElements = document.querySelectorAll('.recruitment-section, .fade-in-up');
+                animatedElements.forEach(el => observer.observe(el));
 
                 // --- Zzz Bubble 粒子アニメーション ---
                 const canvas = document.getElementById('hero-particles');
@@ -501,14 +505,18 @@
                                 layers[0].style.opacity = 1;
                                 layers[1].style.opacity = 0;
                                 layers[2].style.opacity = 0;
-                            } else if (progress < 0.75) {
+                            } else if (progress < 0.65) {
                                 layers[0].style.opacity = 0;
                                 layers[1].style.opacity = 1;
                                 layers[2].style.opacity = 0;
-                            } else {
+                            } else if (progress < 0.85) {
                                 layers[0].style.opacity = 0;
                                 layers[1].style.opacity = 0;
                                 layers[2].style.opacity = 1;
+                            } else {
+                                layers[0].style.opacity = 0;
+                                layers[1].style.opacity = 0;
+                                layers[2].style.opacity = 0;
                             }
                         }
                     });

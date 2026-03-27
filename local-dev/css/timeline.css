@@ -82,15 +82,10 @@
 
 /* タイムラインアイテム共通 */
 #anniv100th .timeline-item {
-
     position: relative;
     width: 50%;
     margin-bottom: 4rem;
     padding: 0 3rem;
-    opacity: 0;
-    /* JSでフェードインさせるための初期設定 */
-    transform: translateY(30px);
-    animation: fadeInUpTimeline 0.8s ease-out forwards;
 }
 
 
@@ -250,13 +245,6 @@
 }
 
 
-@keyframes fadeInUpTimeline {
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 
 /* レスポンシブ対応 (モバイル・タブレット向け) */
