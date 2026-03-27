@@ -1,0 +1,461 @@
+/* Scoped: hero.css | Wrapper: #anniv100th | 2026/3/27 12:54:49 */
+/* Scoped: hero.css | Wrapper: #anniv100th | 2026/3/27 10:55:35 */
+/* hero.css: Heroセクション固有のスタイル */
+
+#anniv100th .hero {
+
+
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    /* 中央揃えの基準点 */
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+
+    /* 下部にインジケーター用の予約スペースを作る */
+    padding-bottom: 120px;
+}
+
+
+
+#anniv100th .hero-background {
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: #000;
+    overflow: hidden;
+}
+
+
+
+#anniv100th .hero-video {
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    /* 動画は最背面 */
+}
+
+
+
+#anniv100th #hero-particles {
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+    /* オーバーレイの上（粒子がより際立つ） */
+    pointer-events: none;
+}
+
+
+
+#anniv100th .hero-background::before {
+
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
+        radial-gradient(circle at 20% 80%, rgba(240, 131, 0, 0.05) 0%, transparent 50%);
+    /* アクセントカラーのほのかな光 */
+    z-index: 1;
+}
+
+
+
+#anniv100th .hero-image-overlay {
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* ネイビーの色味を維持しつつ、動画が見えるように透過度を調整 (0.7) */
+    background: linear-gradient(135deg, rgba(0, 31, 77, 0.7) 0%, rgba(0, 64, 152, 0.7) 100%);
+    z-index: 2;
+    /* 動画の上、粒子の下 */
+}
+
+
+
+#anniv100th .hero-content {
+
+
+    position: relative;
+    z-index: 10;
+    /* 最前面へ */
+    text-align: center;
+    color: var(--text-white);
+    padding: 0 5%;
+    max-width: 900px;
+}
+
+
+
+#anniv100th .hero-special-logo {
+
+
+    display: inline-block;
+    margin-bottom: 2.5rem;
+    max-width: 400px;
+    width: 100%;
+}
+
+
+
+#anniv100th .anniversary-logo-img {
+
+
+    width: 100%;
+    height: auto;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+
+
+@keyframes logoFloat {
+
+
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+#anniv100th .hero-title {
+
+
+    font-size: 3.5rem;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    color: var(--text-white);
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+
+
+#anniv100th .hero-bright-ver .hero-title {
+
+
+    color: rgb(0 64 153);
+}
+
+
+
+#anniv100th .hero-subtitle {
+
+
+    font-size: 1.25rem;
+    line-height: 1.8;
+    margin-bottom: 3rem;
+    /* 元のゆったりした余白に戻す */
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+
+
+#anniv100th .hero-actions {
+
+
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+
+
+/* 各パーツの順次フェードイン設定 */
+#anniv100th .hero-special-logo, #anniv100th .hero-title, #anniv100th .hero-subtitle, #anniv100th .hero-actions {
+
+
+    opacity: 0;
+    animation: fadeInUp 1.2s ease-out forwards;
+}
+
+
+
+#anniv100th .hero-special-logo {
+
+
+    animation-delay: 1.5s; /* 最初にロゴを表示 */
+}
+
+
+
+#anniv100th .hero-title {
+
+
+    animation-delay: 3s; /* ロゴの次にタイトルを表示 */
+}
+
+
+
+#anniv100th .hero-subtitle {
+
+
+    animation-delay: 3s; /* タイトルと同時に表示 */
+}
+
+
+
+#anniv100th .hero-actions {
+
+
+    animation-delay: 3s; /* タイトルと同時に表示 */
+}
+
+
+
+/* スクロールインジケーター */
+#anniv100th .scroll-indicator {
+
+
+    position: absolute;
+    bottom: 20px;
+    /* 少し上に上げ、予約スペース内に収める */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: var(--z-content);
+    color: var(--text-white);
+    opacity: 0.8;
+}
+
+
+
+#anniv100th .scroll-text {
+
+
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+
+
+#anniv100th .scroll-line {
+
+
+    width: 1px;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+#anniv100th .scroll-line::after {
+
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--text-white);
+    animation: scrollDown 2s cubic-bezier(0.77, 0, 0.175, 1) infinite;
+}
+
+
+
+/* Animations */
+@keyframes fadeInUp {
+
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+@keyframes scrollDown {
+
+
+    0% {
+        transform: translateY(-100%);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+
+
+    #anniv100th .hero {
+
+
+        padding-top: 60px;
+        padding-bottom: 100px;
+        /* インジケーター用スペースは維持 */
+    }
+
+
+
+    #anniv100th .hero-special-logo {
+
+
+        max-width: 320px;
+        /* 元の大きさに戻す */
+        margin-bottom: 2.5rem;
+    }
+
+
+
+    #anniv100th .hero-title {
+
+
+        font-size: 2.25rem;
+        /* スマホで見やすい標準サイズに */
+        margin-bottom: 1.5rem;
+    }
+
+
+
+    #anniv100th .hero-subtitle {
+
+
+        font-size: 0.95rem;
+        /* テキストを表示し、視認性を確保 */
+        margin-bottom: 2rem;
+    }
+
+
+
+    #anniv100th .hero-actions {
+
+
+        flex-direction: row;
+        /* 横並びに戻す */
+        gap: 0.8rem;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+
+
+    #anniv100th .hero-actions .btn {
+
+
+        flex: 1;
+        /* 均等な幅で横に並べる */
+        padding: 0.8rem 0.5rem;
+        /* 1行に収まるようさらにスリムに */
+        font-size: 0.85rem;
+        white-space: nowrap;
+        /* 改行させない */
+    }
+
+
+
+    /* 矢印は少しコンパクトにするのみ */
+    #anniv100th .scroll-indicator {
+
+
+        bottom: 20px;
+    }
+
+
+
+    #anniv100th .scroll-line {
+
+
+        height: 40px;
+    }
+
+
+}
+
+
+
+/* 画面の高さが低い場合の微調整のみ残し、サブタイトル等は消さない */
+@media (max-height: 700px) {
+
+
+    #anniv100th .hero {
+
+
+        padding-bottom: 80px;
+    }
+
+
+
+    #anniv100th .hero-special-logo {
+
+
+        max-width: 320px;
+        margin-bottom: 1rem;
+    }
+
+
+
+    #anniv100th .hero-title {
+
+
+        font-size: 1.8rem;
+    }
+
+
+
+    #anniv100th .hero-actions {
+
+
+        gap: 0.5rem;
+    }
+
+
+}
+

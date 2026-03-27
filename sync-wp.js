@@ -10,7 +10,7 @@ const path = require('path');
  * 出力先: wp-conversion/lunaire-100th-anniversary/css/scoped/
  */
 
-const targetDir = path.join(__dirname, 'wp-conversion', 'lunaire-100th-anniversary');
+const targetDir = path.join(__dirname, 'wp-conversion', 'anniv100th');
 const wrapperID = '#anniv100th';
 
 /**

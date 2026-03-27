@@ -1,0 +1,154 @@
+/* Scoped: recruitment.css | Wrapper: #anniv100th | 2026/3/27 12:54:49 */
+/* Scoped: recruitment.css | Wrapper: #anniv100th | 2026/3/27 10:55:35 */
+/* --------------------------------------------------------------------------
+   recruitment.css: 採用セクション固有のスタイル（ダブル・ダイアゴナル & セクションスライド）
+   -------------------------------------------------------------------------- */
+#anniv100th .recruitment-section {
+
+
+    background-color: #e6f2f8;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+    margin-top: -150px;
+    /* 前のセクションとの重なりをクリップ量に合わせる */
+    padding-top: 18rem;
+    /* 重なり分を含む上部余白を調整 */
+    padding-bottom: 12rem;
+    /* 下の斜め分を含む下部余白 */
+    overflow: hidden;
+
+    /* ダブル・ダイアゴナル (上下並行の斜め切り) */
+    clip-path: polygon(0 150px, 100% 0, 100% calc(100% - 150px), 0 100%);
+
+    /* 初期状態（セクション全体が右側に待機） */
+    opacity: 0;
+    transform: translateX(100px);
+    transition: opacity 1.2s ease, transform 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+
+
+/* 背景オーバーレイ（元の色を活かしつつ文字を際立たせる） */
+#anniv100th .recruitment-section::before {
+
+
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(230, 242, 248, 0);
+    z-index: 1;
+}
+
+
+
+#anniv100th .recruitment-box {
+
+
+    z-index: 2;
+    /* オーバーレイより上にコンテンツを表示 */
+}
+
+
+
+/* スクロール出現用クラス（セクション全体をスライド） */
+#anniv100th .recruitment-section.is-visible {
+
+
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+
+#anniv100th .recruitment-box {
+
+
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 20px;
+    padding: 5rem 3rem;
+    text-align: center;
+    box-shadow: 0 20px 50px rgba(0, 64, 152, 0.08);
+    border: 1px solid rgba(0, 64, 152, 0.05);
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+
+
+#anniv100th .recruitment-label {
+
+
+    display: inline-block;
+    color: var(--secondary-color);
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.3em;
+    margin-bottom: 2rem;
+}
+
+
+
+#anniv100th .recruitment-title {
+
+
+    font-size: 2.8rem;
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    line-height: 1.3;
+}
+
+
+
+#anniv100th .recruitment-text {
+
+
+    font-size: 1.15rem;
+    color: var(--text-light);
+    margin-bottom: 3.5rem;
+    line-height: 2;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+#anniv100th .recruitment-action .btn-primary {
+
+
+    padding: 1.2rem 3.5rem;
+    box-shadow: 0 10px 20px rgba(0, 64, 152, 0.15);
+}
+
+
+
+@media (max-width: 768px) {
+
+
+    #anniv100th .recruitment-section {
+
+
+        margin-top: -80px;
+        padding-top: 10rem;
+        padding-bottom: 8rem;
+        clip-path: polygon(0 80px, 100% 0, 100% calc(100% - 80px), 0 100%);
+    }
+
+
+
+    #anniv100th .recruitment-title {
+
+
+        font-size: 1.8rem;
+    }
+
+
+}
+
