@@ -3,6 +3,7 @@
 
 #anniv100th .feature-section {
     background-color: var(--bg-color);
+    padding-top: 6rem !important; /* 目次の前の呼吸を整える */
     padding-bottom: 200px; /* RECRUITセクションとの重なり分、余白を広げてコンテンツを保護 */
 }
 
@@ -13,6 +14,12 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 3rem;
     margin-top: 4rem;
+}
+
+@media (min-width: 1400px) {
+    #anniv100th .feature-grid {
+        gap: 5rem; /* 余白をさらに広げてワイドな印象に */
+    }
 }
 
 

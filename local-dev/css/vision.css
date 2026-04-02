@@ -41,11 +41,16 @@
 
 
 #anniv100th .vision-content {
-
     position: relative;
     z-index: 3;
     max-width: 800px;
     margin: 0 auto;
+}
+
+@media (min-width: 1400px) {
+    #anniv100th .vision-content {
+        max-width: 1000px; /* 大画面ではコンテンツを少し広げ、ゆとりを持たせる */
+    }
 }
 
 

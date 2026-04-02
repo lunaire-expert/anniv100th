@@ -34,3 +34,16 @@
     --z-modal: 1000;
 }
 
+/* Large screens (Wider layout) */
+@media (min-width: 1400px) {
+    #anniv100th {
+        --container-width: 1400px;
+    }
+}
+
+@media (min-width: 1600px) {
+    #anniv100th {
+        --container-width: 1560px;
+    }
+}
+

@@ -95,7 +95,17 @@
     text-align: center;
     color: var(--text-white);
     padding: 0 5%;
-    max-width: 900px;
+    max-width: 1000px; /* PCでの基本最大幅を少し拡大 */
+}
+
+@media (min-width: 1400px) {
+    #anniv100th .hero-content {
+        max-width: 1200px;
+    }
+    
+    #anniv100th .hero-title {
+        font-size: 4.5rem; /* 大画面ではタイトルをさらに強調 */
+    }
 }
 
 

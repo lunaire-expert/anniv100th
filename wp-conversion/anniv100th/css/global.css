@@ -1,7 +1,9 @@
+/* Scoped: global.css | Wrapper: #anniv100th | 2026/4/2 13:36:19 */
 /* Scoped: global.css | Wrapper: #anniv100th | 2026/3/27 17:03:06 */
 /* Scoped: global.css | Wrapper: #anniv100th | 2026/3/27 10:55:35 */
 /* Reset & Base */
 * {
+
 
 
     margin: 0;
@@ -11,7 +13,9 @@
 
 
 
+
 html, body {
+
 
 
     overflow-x: hidden;
@@ -20,7 +24,9 @@ html, body {
 
 
 
+
 body {
+
 
 
     font-family: var(--font-family-base);
@@ -34,7 +40,9 @@ body {
 
 
 
+
 #anniv100th main {
+
 
 
     overflow-x: hidden;
@@ -42,7 +50,9 @@ body {
 
 
 
+
 #anniv100th a {
+
 
 
     color: inherit;
@@ -52,7 +62,9 @@ body {
 
 
 
+
 #anniv100th img {
+
 
 
     max-width: 100%;
@@ -62,8 +74,10 @@ body {
 
 
 
+
 /* Typography */
 #anniv100th h1, #anniv100th h2, #anniv100th h3, #anniv100th h4, #anniv100th h5, #anniv100th h6 {
+
 
 
     color: var(--primary-color);
@@ -74,8 +88,10 @@ body {
 
 
 
+
 /* Utility Containers */
 #anniv100th .container {
+
 
 
     max-width: var(--container-width);
@@ -85,8 +101,10 @@ body {
 
 
 
+
 /* Global Buttons */
 #anniv100th .btn {
+
 
 
     display: inline-flex;
@@ -102,7 +120,9 @@ body {
 
 
 
+
 #anniv100th .btn-primary {
+
 
 
     background-color: var(--primary-color);
@@ -112,7 +132,9 @@ body {
 
 
 
+
 #anniv100th .btn-primary:hover {
+
 
 
     background-color: var(--text-white);
@@ -121,7 +143,9 @@ body {
 
 
 
+
 #anniv100th .btn-outline {
+
 
 
     background-color: rgba(0, 64, 152, 0.7);
@@ -131,7 +155,9 @@ body {
 
 
 
+
 #anniv100th .btn-outline:hover {
+
 
 
     background-color: var(--text-white);
@@ -141,7 +167,9 @@ body {
 
 
 
+
 #anniv100th .btn-accent {
+
 
 
     background-color: var(--secondary-color);
@@ -151,7 +179,9 @@ body {
 
 
 
+
 #anniv100th .btn-accent:hover {
+
 
 
     background-color: var(--text-white);
@@ -160,8 +190,10 @@ body {
 
 
 
+
 /* モックアップ用の一時的なヘッダースタイル（初期は隠し、スクロールで表示） */
 #anniv100th .site-header {
+
 
 
     position: fixed;
@@ -180,8 +212,10 @@ body {
 
 
 
+
 /* スクロール時に付与されるクラス（衝突回避のため名称変更） */
 #anniv100th .site-header.is-header-active {
+
 
 
     transform: translateY(0) !important;
@@ -189,7 +223,9 @@ body {
 
 
 
+
 #anniv100th .header-inner {
+
 
 
     display: flex;
@@ -200,7 +236,9 @@ body {
 
 
 
+
 #anniv100th .site-logo {
+
 
 
     font-weight: 700;
@@ -210,7 +248,9 @@ body {
 
 
 
+
 #anniv100th .global-nav ul {
+
 
 
     display: flex;
@@ -220,7 +260,9 @@ body {
 
 
 
+
 #anniv100th .global-nav a {
+
 
 
     font-weight: 500;
@@ -229,7 +271,9 @@ body {
 
 
 
+
 #anniv100th .global-nav a:hover {
+
 
 
     color: var(--primary-color);
@@ -237,11 +281,14 @@ body {
 
 
 
+
 /* レスポンシブヘッダー */
 @media (max-width: 768px) {
 
 
+
     #anniv100th .header-inner {
+
 
 
         flex-direction: column;
@@ -251,7 +298,9 @@ body {
 
 
 
+
     #anniv100th .global-nav ul {
+
 
 
         gap: 1.5rem;
@@ -260,5 +309,7 @@ body {
     }
 
 
+
 }
+
 

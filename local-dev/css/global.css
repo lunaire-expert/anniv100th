@@ -61,10 +61,21 @@ body {
 
 /* Utility Containers */
 #anniv100th .container {
-
     max-width: var(--container-width);
     margin: 0 auto;
     padding: var(--container-padding);
+}
+
+#anniv100th .message-text-wrapper {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 1400px) {
+    #anniv100th .message-text-wrapper {
+        max-width: 1000px; /* 大画面ではメッセージの幅も少し広げる */
+    }
 }
 
 
@@ -224,4 +235,54 @@ body {
 #anniv100th .fade-in-up.is-visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* PC（大画面）向けフォントサイズ全体調整（ヒーロー以外） */
+@media (min-width: 993px) {
+    /* セクションタイトル */
+    #anniv100th .section-title {
+        font-size: 3rem !important;
+    }
+
+    /* サブタイトル（見出し下の補足） */
+    #anniv100th .section-subtitle {
+        font-size: 1.2rem !important;
+    }
+
+    /* 基本本文テキスト */
+    #anniv100th p,
+    #anniv100th .section-text,
+    #anniv100th .message-text-wrapper,
+    #anniv100th .timeline-text,
+    #anniv100th .feature-description,
+    #anniv100th .recruitment-text,
+    #anniv100th .vision-text {
+        font-size: 1.15rem !important;
+        line-height: 1.8;
+    }
+
+    /* ボタン・ナビゲーション */
+    #anniv100th .btn,
+    #anniv100th .global-nav a {
+        font-size: 1.1rem !important;
+    }
+
+    /* バッジ・ラベル類 */
+    #anniv100th .vision-badge,
+    #anniv100th .recruitment-label {
+        font-size: 1.1rem !important;
+    }
+
+    /* 各コンポーネントの小見出しや特別要素 */
+    #anniv100th .timeline-year {
+        font-size: 2.4rem !important;
+    }
+    #anniv100th .timeline-heading,
+    #anniv100th .feature-title {
+        font-size: 1.45rem !important;
+    }
+    #anniv100th .vision-title,
+    #anniv100th .recruitment-title {
+        font-size: 3.2rem !important;
+    }
 }

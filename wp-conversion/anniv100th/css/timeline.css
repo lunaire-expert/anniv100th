@@ -1,3 +1,4 @@
+/* Scoped: timeline.css | Wrapper: #anniv100th | 2026/4/2 13:36:19 */
 /* Scoped: timeline.css | Wrapper: #anniv100th | 2026/3/27 17:03:06 */
 /* Scoped: timeline.css | Wrapper: #anniv100th | 2026/3/27 10:55:35 */
 /* timeline.css: Timelineセクション固有のスタイル */
@@ -6,12 +7,15 @@
 #anniv100th .section-padding {
 
 
+
     padding: 6rem 0;
 }
 
 
 
+
 #anniv100th .timeline-section {
+
 
 
     background-color: var(--bg-light);
@@ -21,8 +25,10 @@
 
 
 
+
 /* セクションヘッダー共通スタイル */
 #anniv100th .section-header {
+
 
 
     text-align: center;
@@ -31,7 +37,9 @@
 
 
 
+
 #anniv100th .section-title {
+
 
 
     font-size: 2.5rem;
@@ -43,7 +51,9 @@
 
 
 
+
 #anniv100th .section-title::after {
+
 
 
     content: '';
@@ -58,7 +68,9 @@
 
 
 
+
 #anniv100th .section-subtitle {
+
 
 
     font-size: 1rem;
@@ -69,8 +81,10 @@
 
 
 
+
 /* タイムラインコンテナ */
 #anniv100th .timeline-container {
+
 
 
     position: relative;
@@ -81,8 +95,10 @@
 
 
 
+
 /* タイムラインの中央線 */
 #anniv100th .timeline-line {
+
 
 
     position: absolute;
@@ -97,8 +113,10 @@
 
 
 
+
 /* タイムラインアイテム共通 */
 #anniv100th .timeline-item {
+
 
 
     position: relative;
@@ -113,7 +131,9 @@
 
 
 
+
 #anniv100th .timeline-item:last-child {
+
 
 
     margin-bottom: 0;
@@ -121,8 +141,10 @@
 
 
 
+
 /* 左右の配置設定 */
 #anniv100th .timeline-item.left {
+
 
 
     left: 0;
@@ -133,7 +155,9 @@
 
 
 
+
 #anniv100th .timeline-item.right {
+
 
 
     left: 50%;
@@ -143,8 +167,10 @@
 
 
 
+
 /* タイムラインのドット（点） */
 #anniv100th .timeline-dot {
+
 
 
     position: absolute;
@@ -161,7 +187,9 @@
 
 
 
+
 #anniv100th .timeline-item.left .timeline-dot {
+
 
 
     right: -10px;
@@ -169,7 +197,9 @@
 
 
 
+
 #anniv100th .timeline-item.right .timeline-dot {
+
 
 
     left: -10px;
@@ -177,7 +207,9 @@
 
 
 
+
 #anniv100th .timeline-item:hover .timeline-dot {
+
 
 
     background-color: var(--secondary-color);
@@ -185,8 +217,10 @@
 
 
 
+
 /* コンテンツカード */
 #anniv100th .timeline-content {
+
 
 
     background-color: var(--bg-color);
@@ -200,7 +234,9 @@
 
 
 
+
 #anniv100th .timeline-item:hover .timeline-content {
+
 
 
     transform: translateY(-5px);
@@ -209,8 +245,10 @@
 
 
 
+
 /* カードを指す吹き出しの矢印 */
 #anniv100th .timeline-content::before {
+
 
 
     content: '';
@@ -224,7 +262,9 @@
 
 
 
+
 #anniv100th .timeline-item.left .timeline-content::before {
+
 
 
     right: -15px;
@@ -233,7 +273,9 @@
 
 
 
+
 #anniv100th .timeline-item.right .timeline-content::before {
+
 
 
     left: -15px;
@@ -242,8 +284,10 @@
 
 
 
+
 /* コンテンツ内の要素 */
 #anniv100th .timeline-year {
+
 
 
     font-size: 2rem;
@@ -255,7 +299,9 @@
 
 
 
+
 #anniv100th .timeline-year span {
+
 
 
     font-size: 1rem;
@@ -265,7 +311,9 @@
 
 
 
+
 #anniv100th .timeline-heading {
+
 
 
     font-size: 1.25rem;
@@ -275,7 +323,9 @@
 
 
 
+
 #anniv100th .timeline-text {
+
 
 
     font-size: 1rem;
@@ -285,8 +335,10 @@
 
 
 
+
 /* 画像プレースホルダー */
 #anniv100th .timeline-image-placeholder {
+
 
 
     width: 100%;
@@ -303,7 +355,9 @@
 
 
 
+
 @keyframes fadeInUpTimeline {
+
 
 
     to {
@@ -314,11 +368,14 @@
 
 
 
+
 /* レスポンシブ対応 (モバイル・タブレット向け) */
 @media (max-width: 992px) {
 
 
+
     #anniv100th .section-padding {
+
 
 
         padding: 4rem 0;
@@ -326,7 +383,9 @@
 
 
 
+
     #anniv100th .timeline-line {
+
 
 
         left: 20px;
@@ -335,7 +394,9 @@
 
 
 
+
     #anniv100th .timeline-item {
+
 
 
         width: 100%;
@@ -346,7 +407,9 @@
 
 
 
+
     #anniv100th .timeline-item.left, #anniv100th .timeline-item.right {
+
 
 
         left: 0;
@@ -355,7 +418,9 @@
 
 
 
+
     #anniv100th .timeline-item.left .timeline-dot, #anniv100th .timeline-item.right .timeline-dot {
+
 
 
         left: 10px;
@@ -365,7 +430,9 @@
 
 
 
+
     #anniv100th .timeline-item.left .timeline-content::before, #anniv100th .timeline-item.right .timeline-content::before {
+
 
 
         left: -15px;
@@ -375,5 +442,7 @@
     }
 
 
+
 }
+
 

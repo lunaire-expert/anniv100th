@@ -1,7 +1,9 @@
+/* Scoped: variables.css | Wrapper: #anniv100th | 2026/4/2 13:36:19 */
 /* Scoped: variables.css | Wrapper: #anniv100th | 2026/3/27 17:03:06 */
 /* Scoped: variables.css | Wrapper: #anniv100th | 2026/3/27 10:55:34 */
 /* variables.css: デザインシステムの定義 */
 #anniv100th {
+
 
 
     /* Colors */
@@ -35,5 +37,6 @@
     --z-header: 100;
     --z-modal: 1000;
 }
+
 
 
