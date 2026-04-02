@@ -1,7 +1,7 @@
-/* Scoped: vision.css | Wrapper: #anniv100th | 2026/3/27 10:55:35 */
+/* Scoped: vision.css | Wrapper: | 2026/3/27 10:55:35 */
 /* vision.css: LP最後の締めくくりとなる未来へのビジョンセクション */
 
-#anniv100th .vision-section {
+.vision-section {
 
     background-color: var(--primary-color); /* 背景を濃紺に戻す */
     color: var(--text-white);
@@ -15,7 +15,7 @@
 
 
 /* 背景の装飾を復活 */
-#anniv100th .vision-background {
+.vision-background {
 
     position: absolute;
     top: 0;
@@ -27,7 +27,7 @@
 }
 
 
-#anniv100th .vision-background::before {
+.vision-background::before {
 
     content: '';
     position: absolute;
@@ -40,7 +40,7 @@
 }
 
 
-#anniv100th .vision-content {
+.vision-content {
     position: relative;
     z-index: 3;
     max-width: 800px;
@@ -48,13 +48,13 @@
 }
 
 @media (min-width: 1400px) {
-    #anniv100th .vision-content {
+    .vision-content {
         max-width: 1000px; /* 大画面ではコンテンツを少し広げ、ゆとりを持たせる */
     }
 }
 
 
-#anniv100th .vision-badge {
+.vision-badge {
 
     display: inline-block;
     color: var(--secondary-color);
@@ -68,7 +68,7 @@
 }
 
 
-#anniv100th .vision-title {
+.vision-title {
 
     font-size: 2.8rem;
     font-weight: 700;
@@ -78,7 +78,7 @@
 }
 
 
-#anniv100th .vision-text {
+.vision-text {
 
     font-size: 1.15rem;
     line-height: 2;
@@ -87,7 +87,7 @@
 }
 
 
-#anniv100th .vision-cta-wrapper {
+.vision-cta-wrapper {
 
     display: flex;
     justify-content: center;
@@ -97,13 +97,13 @@
 
 @media (max-width: 768px) {
 
-    #anniv100th .vision-section {
+    .vision-section {
 
         margin-top: -80px;
         padding-top: 12rem;
     }
 
-    #anniv100th .vision-title {
+    .vision-title {
 
         font-size: 1.8rem;
     }

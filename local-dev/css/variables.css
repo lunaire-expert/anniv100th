@@ -1,6 +1,4 @@
-/* Scoped: variables.css | Wrapper: #anniv100th | 2026/3/27 10:55:34 */
-/* variables.css: デザインシステムの定義 */
-#anniv100th {
+:root {
 
     /* Colors */
     --primary-color: #004098; /* Navy - 信頼・誠実 */
@@ -36,13 +34,13 @@
 
 /* Large screens (Wider layout) */
 @media (min-width: 1400px) {
-    #anniv100th {
+    :root {
         --container-width: 1400px;
     }
 }
 
 @media (min-width: 1600px) {
-    #anniv100th {
+    :root {
         --container-width: 1560px;
     }
 }

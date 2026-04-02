@@ -1,4 +1,4 @@
-/* Scoped: global.css | Wrapper: #anniv100th | 2026/3/27 10:55:35 */
+/* Scoped: global.css | Wrapper: | 2026/3/27 10:55:35 */
 /* Reset & Base */
 * {
 
@@ -27,13 +27,13 @@ body {
 }
 
 
-#anniv100th main {
+main {
 
     overflow-x: hidden;
 }
 
 
-#anniv100th a {
+a {
 
     color: inherit;
     text-decoration: none;
@@ -41,7 +41,7 @@ body {
 }
 
 
-#anniv100th img {
+img {
 
     max-width: 100%;
     height: auto;
@@ -50,7 +50,7 @@ body {
 
 
 /* Typography */
-#anniv100th h1, #anniv100th h2, #anniv100th h3, #anniv100th h4, #anniv100th h5, #anniv100th h6 {
+h1, h2, h3, h4, h5, h6 {
 
     color: var(--primary-color);
     font-family: var(--font-family-serif);
@@ -60,27 +60,27 @@ body {
 
 
 /* Utility Containers */
-#anniv100th .container {
+.container {
     max-width: var(--container-width);
     margin: 0 auto;
     padding: var(--container-padding);
 }
 
-#anniv100th .message-text-wrapper {
+.message-text-wrapper {
     max-width: 800px;
     margin-left: auto;
     margin-right: auto;
 }
 
 @media (min-width: 1400px) {
-    #anniv100th .message-text-wrapper {
+    .message-text-wrapper {
         max-width: 1000px; /* 大画面ではメッセージの幅も少し広げる */
     }
 }
 
 
 /* Global Buttons */
-#anniv100th .btn {
+.btn {
 
     display: inline-flex;
     align-items: center;
@@ -94,7 +94,7 @@ body {
 }
 
 
-#anniv100th .btn-primary {
+.btn-primary {
 
     background-color: var(--primary-color);
     color: var(--text-white);
@@ -102,14 +102,14 @@ body {
 }
 
 
-#anniv100th .btn-primary:hover {
+.btn-primary:hover {
 
     background-color: var(--text-white);
     color: var(--primary-color);
 }
 
 
-#anniv100th .btn-outline {
+.btn-outline {
 
     background-color: rgba(0, 64, 152, 0.7);
     color: var(--text-white);
@@ -117,7 +117,7 @@ body {
 }
 
 
-#anniv100th .btn-outline:hover {
+.btn-outline:hover {
 
     background-color: var(--text-white);
     color: var(--primary-color);
@@ -125,7 +125,7 @@ body {
 }
 
 
-#anniv100th .btn-accent {
+.btn-accent {
 
     background-color: var(--secondary-color);
     color: var(--text-white);
@@ -133,7 +133,7 @@ body {
 }
 
 
-#anniv100th .btn-accent:hover {
+.btn-accent:hover {
 
     background-color: var(--text-white);
     color: var(--secondary-color);
@@ -141,7 +141,7 @@ body {
 
 
 /* モックアップ用の一時的なヘッダースタイル（初期は隠し、スクロールで表示） */
-#anniv100th .site-header {
+.site-header {
 
     position: fixed;
     top: 0;
@@ -159,13 +159,13 @@ body {
 
 
 /* スクロール時に付与されるクラス（衝突回避のため名称変更） */
-#anniv100th .site-header.is-header-active {
+.site-header.is-header-active {
 
     transform: translateY(0) !important;
 }
 
 
-#anniv100th .header-inner {
+.header-inner {
 
     display: flex;
     justify-content: space-between;
@@ -174,7 +174,7 @@ body {
 }
 
 
-#anniv100th .site-logo {
+.site-logo {
 
     font-weight: 700;
     font-size: 1.5rem;
@@ -182,7 +182,7 @@ body {
 }
 
 
-#anniv100th .global-nav ul {
+.global-nav ul {
 
     display: flex;
     gap: 2rem;
@@ -190,14 +190,14 @@ body {
 }
 
 
-#anniv100th .global-nav a {
+.global-nav a {
 
     font-weight: 500;
     color: var(--text-main);
 }
 
 
-#anniv100th .global-nav a:hover {
+.global-nav a:hover {
 
     color: var(--primary-color);
 }
@@ -206,7 +206,7 @@ body {
 /* レスポンシブヘッダー */
 @media (max-width: 768px) {
 
-    #anniv100th .header-inner {
+    .header-inner {
 
         flex-direction: column;
         padding: 1rem 5%;
@@ -214,7 +214,7 @@ body {
     }
 
 
-    #anniv100th .global-nav ul {
+    .global-nav ul {
 
         gap: 1.5rem;
         flex-wrap: wrap;
@@ -225,14 +225,14 @@ body {
 
 /* Animation: Fade In Up
    -------------------------------------------------------------------------- */
-#anniv100th .fade-in-up {
+.fade-in-up {
     opacity: 0;
     transform: translateY(60px);
     transition: opacity 1.6s ease-out, transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
     will-change: opacity, transform;
 }
 
-#anniv100th .fade-in-up.is-visible {
+.fade-in-up.is-visible {
     opacity: 1;
     transform: translateY(0);
 }
@@ -240,49 +240,49 @@ body {
 /* PC（大画面）向けフォントサイズ全体調整（ヒーロー以外） */
 @media (min-width: 993px) {
     /* セクションタイトル */
-    #anniv100th .section-title {
+    .section-title {
         font-size: 3rem !important;
     }
 
     /* サブタイトル（見出し下の補足） */
-    #anniv100th .section-subtitle {
+    .section-subtitle {
         font-size: 1.2rem !important;
     }
 
     /* 基本本文テキスト */
-    #anniv100th p,
-    #anniv100th .section-text,
-    #anniv100th .message-text-wrapper,
-    #anniv100th .timeline-text,
-    #anniv100th .feature-description,
-    #anniv100th .recruitment-text,
-    #anniv100th .vision-text {
+    p,
+    .section-text,
+    .message-text-wrapper,
+    .timeline-text,
+    .feature-description,
+    .recruitment-text,
+    .vision-text {
         font-size: 1.15rem !important;
         line-height: 1.8;
     }
 
     /* ボタン・ナビゲーション */
-    #anniv100th .btn,
-    #anniv100th .global-nav a {
+    .btn,
+    .global-nav a {
         font-size: 1.1rem !important;
     }
 
     /* バッジ・ラベル類 */
-    #anniv100th .vision-badge,
-    #anniv100th .recruitment-label {
+    .vision-badge,
+    .recruitment-label {
         font-size: 1.1rem !important;
     }
 
     /* 各コンポーネントの小見出しや特別要素 */
-    #anniv100th .timeline-year {
+    .timeline-year {
         font-size: 2.4rem !important;
     }
-    #anniv100th .timeline-heading,
-    #anniv100th .feature-title {
+    .timeline-heading,
+    .feature-title {
         font-size: 1.45rem !important;
     }
-    #anniv100th .vision-title,
-    #anniv100th .recruitment-title {
+    .vision-title,
+    .recruitment-title {
         font-size: 3.2rem !important;
     }
 }

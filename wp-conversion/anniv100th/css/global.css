@@ -1,8 +1,10 @@
+/* Scoped: global.css | Wrapper: #anniv100th | 2026/4/2 14:56:24 */
 /* Scoped: global.css | Wrapper: #anniv100th | 2026/4/2 13:36:19 */
 /* Scoped: global.css | Wrapper: #anniv100th | 2026/3/27 17:03:06 */
 /* Scoped: global.css | Wrapper: #anniv100th | 2026/3/27 10:55:35 */
 /* Reset & Base */
 * {
+
 
 
 
@@ -14,7 +16,9 @@
 
 
 
+
 html, body {
+
 
 
 
@@ -25,7 +29,9 @@ html, body {
 
 
 
+
 body {
+
 
 
 
@@ -41,7 +47,9 @@ body {
 
 
 
+
 #anniv100th main {
+
 
 
 
@@ -51,7 +59,9 @@ body {
 
 
 
+
 #anniv100th a {
+
 
 
 
@@ -63,7 +73,9 @@ body {
 
 
 
+
 #anniv100th img {
+
 
 
 
@@ -75,8 +87,10 @@ body {
 
 
 
+
 /* Typography */
 #anniv100th h1, #anniv100th h2, #anniv100th h3, #anniv100th h4, #anniv100th h5, #anniv100th h6 {
+
 
 
 
@@ -89,8 +103,10 @@ body {
 
 
 
+
 /* Utility Containers */
 #anniv100th .container {
+
 
 
 
@@ -102,8 +118,10 @@ body {
 
 
 
+
 /* Global Buttons */
 #anniv100th .btn {
+
 
 
 
@@ -121,7 +139,9 @@ body {
 
 
 
+
 #anniv100th .btn-primary {
+
 
 
 
@@ -133,7 +153,9 @@ body {
 
 
 
+
 #anniv100th .btn-primary:hover {
+
 
 
 
@@ -144,7 +166,9 @@ body {
 
 
 
+
 #anniv100th .btn-outline {
+
 
 
 
@@ -156,7 +180,9 @@ body {
 
 
 
+
 #anniv100th .btn-outline:hover {
+
 
 
 
@@ -168,7 +194,9 @@ body {
 
 
 
+
 #anniv100th .btn-accent {
+
 
 
 
@@ -180,7 +208,9 @@ body {
 
 
 
+
 #anniv100th .btn-accent:hover {
+
 
 
 
@@ -191,8 +221,10 @@ body {
 
 
 
+
 /* モックアップ用の一時的なヘッダースタイル（初期は隠し、スクロールで表示） */
 #anniv100th .site-header {
+
 
 
 
@@ -213,8 +245,10 @@ body {
 
 
 
+
 /* スクロール時に付与されるクラス（衝突回避のため名称変更） */
 #anniv100th .site-header.is-header-active {
+
 
 
 
@@ -224,7 +258,9 @@ body {
 
 
 
+
 #anniv100th .header-inner {
+
 
 
 
@@ -237,7 +273,9 @@ body {
 
 
 
+
 #anniv100th .site-logo {
+
 
 
 
@@ -249,7 +287,9 @@ body {
 
 
 
+
 #anniv100th .global-nav ul {
+
 
 
 
@@ -261,7 +301,9 @@ body {
 
 
 
+
 #anniv100th .global-nav a {
+
 
 
 
@@ -272,7 +314,9 @@ body {
 
 
 
+
 #anniv100th .global-nav a:hover {
+
 
 
 
@@ -282,12 +326,15 @@ body {
 
 
 
+
 /* レスポンシブヘッダー */
 @media (max-width: 768px) {
 
 
 
+
     #anniv100th .header-inner {
+
 
 
 
@@ -299,7 +346,9 @@ body {
 
 
 
+
     #anniv100th .global-nav ul {
+
 
 
 
@@ -310,6 +359,8 @@ body {
 
 
 
+
 }
+
 
 

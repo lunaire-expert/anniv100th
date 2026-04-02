@@ -39,7 +39,7 @@
             /* 元のアクセントカラーの光を消す */
         }
 
-        #anniv100th .hero-bright-ver .hero-image-overlay {
+        .hero-bright-ver .hero-image-overlay {
             background: rgba(255, 255, 255, 0.6);
         }
 
@@ -214,7 +214,9 @@
                     </div>
 
                     <div class="timeline-container">
-                        <div class="timeline-line"></div>
+                        <div class="timeline-line">
+                            <div class="timeline-progress-line-fill"></div>
+                        </div>
 
                         <!-- 時代ラベル: 大正 -->
                         <div class="timeline-era-label fade-in-up era-taisho" style="top: -20px;">大正</div>
@@ -579,30 +581,30 @@
                 }
 
                 // --- Timeline Sequential Drawing ---
-                const timelineContainer = wrapper.querySelector('.timeline-container');
-                const progressLine = wrapper.querySelector('.timeline-line');
-                const eraLabels = wrapper.querySelectorAll('.timeline-era-label');
-                const timelineItems = wrapper.querySelectorAll('.timeline-item');
+                const timelineContainer = document.querySelector('.timeline-container');
+                const progressLineFill = document.querySelector('.timeline-progress-line-fill');
+                const eraLabels = document.querySelectorAll('.timeline-era-label');
+                const timelineItems = document.querySelectorAll('.timeline-item');
 
                 function updateTimelineDrawing() {
-                    if (!timelineContainer || !progressLine) return;
-
+                    if (!timelineContainer || !progressLineFill) return;
+ 
                     const tRect = timelineContainer.getBoundingClientRect();
                     const vHeight = window.innerHeight;
-
+ 
                     // コンテナの全高をCSS変数にセット（グラデーション計算用）
                     timelineContainer.style.setProperty('--timeline-total-height', tRect.height + 'px');
-
+ 
                     // 描画開始基準点（画面上部から70%の位置）
                     const triggerPoint = vHeight * 0.7;
                     const scrollDistance = triggerPoint - tRect.top;
                     const timelineHeight = tRect.height;
-
+ 
                     let drawProgress = Math.min(Math.max(scrollDistance / timelineHeight, 0), 1);
                     const currentLineHeight = timelineHeight * drawProgress;
-
+ 
                     // ラインの長さを更新
-                    progressLine.style.height = currentLineHeight + 'px';
+                    progressLineFill.style.height = currentLineHeight + 'px';
 
                     // 各ラベルの表示判定
                     eraLabels.forEach(label => {

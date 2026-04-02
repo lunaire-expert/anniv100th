@@ -1,14 +1,14 @@
-/* Scoped: feature.css | Wrapper: #anniv100th | 2026/3/27 10:55:35 */
+/* Scoped: feature.css | Wrapper: | 2026/3/27 10:55:35 */
 /* feature.css: Feature（強み）セクション固有のスタイル */
 
-#anniv100th .feature-section {
+.feature-section {
     background-color: var(--bg-color);
     padding-top: 6rem !important; /* 目次の前の呼吸を整える */
     padding-bottom: 200px; /* RECRUITセクションとの重なり分、余白を広げてコンテンツを保護 */
 }
 
 
-#anniv100th .feature-grid {
+.feature-grid {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -17,14 +17,14 @@
 }
 
 @media (min-width: 1400px) {
-    #anniv100th .feature-grid {
+    .feature-grid {
         gap: 5rem; /* 余白をさらに広げてワイドな印象に */
     }
 }
 
 
 /* Feature Card */
-#anniv100th .feature-card {
+.feature-card {
 
     background: #fff;
     border-radius: 12px;
@@ -37,7 +37,7 @@
 }
 
 
-#anniv100th .feature-card:hover {
+.feature-card:hover {
 
     transform: translateY(-10px);
     box-shadow: 0 15px 40px rgba(0, 40, 150, 0.1); /* プライマリーカラーを少し混ぜた影 */
@@ -46,7 +46,7 @@
 
 /* 中央のカードを少し下げる（動きのあるレイアウト）のスタイルは削除されました */
 
-#anniv100th .feature-image-wrapper {
+.feature-image-wrapper {
 
     position: relative;
     height: 240px;
@@ -54,7 +54,7 @@
 }
 
 
-#anniv100th .feature-image-placeholder {
+.feature-image-placeholder {
 
     width: 100%;
     height: 100%;
@@ -64,14 +64,14 @@
 }
 
 
-#anniv100th .feature-card:hover .feature-image-placeholder {
+.feature-card:hover .feature-image-placeholder {
 
     transform: scale(1.05);
 }
 
 
 /* モックアップ用の背景色設定 */
-#anniv100th .gauze-bg {
+.gauze-bg {
 
     background-color: #f0f0f0;
     /* 繊維を思わせる薄いパターンやグラデーション */
@@ -80,7 +80,7 @@
 }
 
 
-#anniv100th .down-bg {
+.down-bg {
 
     background-color: #e8f0f8;
     background-image: radial-gradient(#d0e0f0 10%, transparent 11%), radial-gradient(#d0e0f0 10%, transparent 11%);
@@ -89,7 +89,7 @@
 }
 
 
-#anniv100th .oem-bg {
+.oem-bg {
 
     background-color: #e6e6e6;
     background-image: linear-gradient(0deg, transparent 24%, rgba(0, 64, 152, 0.05) 25%, rgba(0, 64, 152, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 64, 152, 0.05) 75%, rgba(0, 64, 152, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 64, 152, 0.05) 25%, rgba(0, 64, 152, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 64, 152, 0.05) 75%, rgba(0, 64, 152, 0.05) 76%, transparent 77%, transparent);
@@ -97,7 +97,7 @@
 }
 
 
-#anniv100th .feature-icon {
+.feature-icon {
 
     position: absolute;
     bottom: 20px; /* 見切れないように要素内に完全に収める */
@@ -119,14 +119,14 @@
 }
 
 
-#anniv100th .feature-card:hover .feature-icon {
+.feature-card:hover .feature-icon {
 
     background-color: var(--secondary-color);
     box-shadow: 0 5px 15px rgba(240, 131, 0, 0.3);
 }
 
 
-#anniv100th .feature-content {
+.feature-content {
 
     padding: 3rem 2rem 2rem;
     flex-grow: 1;
@@ -135,7 +135,7 @@
 }
 
 
-#anniv100th .feature-title {
+.feature-title {
 
     font-size: 1.3rem;
     color: var(--primary-color);
@@ -144,7 +144,7 @@
 }
 
 
-#anniv100th .feature-description {
+.feature-description {
 
     color: var(--text-light);
     font-size: 0.95rem;
@@ -154,14 +154,14 @@
 }
 
 
-#anniv100th .feature-cta {
+.feature-cta {
 
     margin-top: 5rem;
     text-align: center;
 }
 
 
-#anniv100th .btn-large {
+.btn-large {
 
     padding: 1.2rem 3rem;
     font-size: 1.1rem;
@@ -172,7 +172,7 @@
 /* レスポンシブ対応 */
 @media (max-width: 992px) {
 
-    #anniv100th .feature-grid {
+    .feature-grid {
 
         grid-template-columns: repeat(2, 1fr);
     }
@@ -182,7 +182,7 @@
 
 @media (max-width: 768px) {
 
-    #anniv100th .feature-grid {
+    .feature-grid {
 
         grid-template-columns: 1fr;
         gap: 2rem;

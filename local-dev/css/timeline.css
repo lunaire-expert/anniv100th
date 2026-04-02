@@ -1,14 +1,14 @@
-/* Scoped: timeline.css | Wrapper: #anniv100th | 2026/3/27 10:55:35 */
+/* Scoped: timeline.css | Wrapper: | 2026/3/27 10:55:35 */
 /* timeline.css: Timelineセクション固有のスタイル */
 
 /* セクション全体の余白設定 （将来的にglobal.cssに移動してもよい） */
-#anniv100th .section-padding {
+.section-padding {
 
     padding: 6rem 0;
 }
 
 
-#anniv100th .timeline-section {
+.timeline-section {
     background-color: var(--bg-light);
     overflow: hidden;
     padding-bottom: 0 !important;
@@ -16,14 +16,14 @@
 
 
 /* セクションヘッダー共通スタイル */
-#anniv100th .section-header {
+.section-header {
 
     text-align: center;
     margin-bottom: 4rem;
 }
 
 
-#anniv100th .section-title {
+.section-title {
 
     font-size: 2.5rem;
     color: var(--primary-color);
@@ -33,7 +33,7 @@
 }
 
 
-#anniv100th .section-title::after {
+.section-title::after {
 
     content: '';
     position: absolute;
@@ -46,7 +46,7 @@
 }
 
 
-#anniv100th .section-subtitle {
+.section-subtitle {
 
     font-size: 1rem;
     color: var(--text-light);
@@ -56,7 +56,7 @@
 
 
 /* タイムラインコンテナ */
-#anniv100th .timeline-container {
+.timeline-container {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
@@ -67,41 +67,47 @@
 /* タイムラインの終端フェード（擬似要素は廃止し、線内部のグラデーションに統合） */
 
 @media (min-width: 1400px) {
-    #anniv100th .timeline-container {
+    .timeline-container {
         max-width: 1200px;
         /* 大画面ではタイムラインの幅も広げる */
     }
 }
 
 @media (min-width: 1600px) {
-    #anniv100th .timeline-container {
+    .timeline-container {
         max-width: 1400px;
     }
 }
 
 
-/* タイムラインの進行ライン（描画用） */
-#anniv100th .timeline-line {
+/* タイムラインの土台（背景レール） */
+.timeline-line {
     position: absolute;
     top: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 4px;
-    /* 2px -> 4px */
-    height: 0;
-    /* JSで動的に制御 */
-    /* 背景をグラデーションへ。下約200pxで白へ変化させる */
-    background-image: linear-gradient(to bottom, var(--primary-color) 0%, var(--primary-color) calc(var(--timeline-total-height) - 250px), #ffffff var(--timeline-total-height));
+    height: 100%;
+    background-color: #eee;
+    z-index: 1;
+}
+
+/* タイムラインの進行ライン（描画用・JSで高さを制御） */
+.timeline-progress-line-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0; /* JSで動的に制御 */
+    background-image: linear-gradient(to bottom, var(--primary-color) 0%, var(--primary-color) calc(var(--timeline-total-height) - 150px), rgba(255, 255, 255, 0) 100%);
     background-size: 100% var(--timeline-total-height);
     background-repeat: no-repeat;
     background-attachment: scroll;
     transform-origin: top;
-    z-index: 1;
-    /* 背景として最背面に固定 */
 }
 
 /* タイムラインアイテム共通（形状変化を際立たせるため、コンテナの出現は速める） */
-#anniv100th .timeline-item {
+.timeline-item {
     position: relative;
     width: 50%;
     margin-bottom: 4rem;
@@ -112,51 +118,51 @@
     z-index: 5;
 }
 
-#anniv100th .timeline-item.is-visible {
+.timeline-item.is-visible {
     opacity: 1;
 }
 
 @media (min-width: 1400px) {
-    #anniv100th .timeline-item {
+    .timeline-item {
         padding: 0 4.5rem;
         /* 大画面では左右の余白を広げて重なりを緩和 */
     }
 }
 
 
-#anniv100th .timeline-item:last-child {
+.timeline-item:last-child {
 
     margin-bottom: 0;
 }
 
 
 /* 左右の配置設定 */
-#anniv100th .timeline-item.left {
+.timeline-item.left {
     left: 0;
     text-align: right;
 }
 
 /* 吹き出しの起点を設定（左側のカードは右端の矢印から広がる） */
-#anniv100th .timeline-item.left .timeline-content {
+.timeline-item.left .timeline-content {
     transform-origin: right 25px;
     clip-path: circle(0% at 100% 25px);
     /* 初期状態で先端からの極小円 */
 }
 
-#anniv100th .timeline-item.right {
+.timeline-item.right {
     left: 50%;
     text-align: left;
 }
 
 /* 右側のカードは左端の矢印から広がる */
-#anniv100th .timeline-item.right .timeline-content {
+.timeline-item.right .timeline-content {
     transform-origin: left 25px;
     clip-path: circle(0% at 0% 25px);
 }
 
 
 /* タイムラインの要素グループ（ドットとカードをセットで管理） */
-#anniv100th .timeline-content-group {
+.timeline-content-group {
     position: static;
     /* デスクトップでは解除し、ドットが中央基準になるよう調整 */
     width: 100%;
@@ -164,7 +170,7 @@
 
 
 /* タイムラインのドット（点） */
-#anniv100th .timeline-dot {
+.timeline-dot {
 
     position: absolute;
     top: 15px;
@@ -181,26 +187,26 @@
 }
 
 
-#anniv100th .timeline-item.left .timeline-dot {
+.timeline-item.left .timeline-dot {
 
     right: -10px;
 }
 
 
-#anniv100th .timeline-item.right .timeline-dot {
+.timeline-item.right .timeline-dot {
 
     left: -10px;
 }
 
 
-#anniv100th .timeline-item:hover .timeline-dot {
+.timeline-item:hover .timeline-dot {
 
     background-color: var(--secondary-color);
 }
 
 
 /* コンテンツカード */
-#anniv100th .timeline-content {
+.timeline-content {
     background-color: var(--bg-color);
     padding: 1.2rem;
     border-radius: 8px;
@@ -220,7 +226,7 @@
 }
 
 /* 表示状態：吹き出しの先端から、円状に「ぶわーっ」と溢れ出す */
-#anniv100th .timeline-item.is-visible .timeline-content {
+.timeline-item.is-visible .timeline-content {
     clip-path: circle(125%);
     /* カード全体が収まるまで確実に広げる */
     transform: scale(1);
@@ -228,7 +234,7 @@
 }
 
 
-#anniv100th .timeline-item:hover .timeline-content {
+.timeline-item:hover .timeline-content {
 
     transform: translateY(-5px);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
@@ -236,7 +242,7 @@
 
 
 /* カードを指す吹き出しの矢印 */
-#anniv100th .timeline-content::before {
+.timeline-content::before {
 
     content: '';
     position: absolute;
@@ -248,14 +254,14 @@
 }
 
 
-#anniv100th .timeline-item.left .timeline-content::before {
+.timeline-item.left .timeline-content::before {
 
     right: -15px;
     border-left: 15px solid var(--bg-color);
 }
 
 
-#anniv100th .timeline-item.right .timeline-content::before {
+.timeline-item.right .timeline-content::before {
 
     left: -15px;
     border-right: 15px solid var(--bg-color);
@@ -263,7 +269,7 @@
 
 
 /* コンテンツ内の要素 */
-#anniv100th .timeline-year {
+.timeline-year {
 
     font-size: 2rem;
     font-weight: 700;
@@ -273,7 +279,7 @@
 }
 
 
-#anniv100th .timeline-year span {
+.timeline-year span {
 
     font-size: 1rem;
     margin-left: 0.2rem;
@@ -281,7 +287,7 @@
 }
 
 
-#anniv100th .timeline-heading {
+.timeline-heading {
 
     font-size: 1.25rem;
     margin-bottom: 1rem;
@@ -289,7 +295,7 @@
 }
 
 
-#anniv100th .timeline-text {
+.timeline-text {
 
     font-size: 1rem;
     color: var(--text-light);
@@ -298,7 +304,7 @@
 
 
 /* 画像プレースホルダー */
-#anniv100th .timeline-image-placeholder {
+.timeline-image-placeholder {
     width: 100%;
     height: 180px;
     /* 少しスリムに調整 */
@@ -314,7 +320,7 @@
 }
 
 /* 時代（元号）ラベル：初期状態は非表示（JSでトリガー） */
-#anniv100th .timeline-era-label {
+.timeline-era-label {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0) scaleX(0);
@@ -336,7 +342,7 @@
     pointer-events: none;
 }
 
-#anniv100th .timeline-era-label.is-visible {
+.timeline-era-label.is-visible {
     opacity: 1;
     transform: translate(-50%, 0) scaleX(1);
     /* 横に広がる */
@@ -344,14 +350,14 @@
 }
 
 /* スクロールアニメーション用 (元号ラベル専用) */
-#anniv100th .timeline-era-label.fade-in-up {
+.timeline-era-label.fade-in-up {
     transform: translate(-50%, 0) scaleX(0);
     /* 最初は横幅ゼロ */
     transform-origin: center;
     opacity: 0;
 }
 
-#anniv100th .timeline-era-label.fade-in-up.is-visible {
+.timeline-era-label.fade-in-up.is-visible {
     opacity: 1;
     transform: translate(-50%, 0) scaleX(1);
     /* 横に広がる */
@@ -359,13 +365,13 @@
 }
 
 /* PC用：反対側の装飾エリア */
-#anniv100th .timeline-visual-deco {
+.timeline-visual-deco {
     display: none;
     /* デフォルト非表示、特定条件で表示 */
 }
 
 @media (min-width: 993px) {
-    #anniv100th .timeline-visual-deco {
+    .timeline-visual-deco {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -384,7 +390,7 @@
         box-shadow: 0 10px 30px rgba(0, 64, 152, 0.1);
     }
 
-    #anniv100th .timeline-visual-deco .deco-title {
+    .timeline-visual-deco .deco-title {
         display: block;
         font-weight: 700;
         font-size: 1.2rem;
@@ -396,45 +402,45 @@
         width: 100%;
     }
 
-    #anniv100th .timeline-item.left .timeline-visual-deco {
+    .timeline-item.left .timeline-visual-deco {
         right: -95%;
         /* 反対側の中心付近へ送り出す */
     }
 
-    #anniv100th .timeline-item.right .timeline-visual-deco {
+    .timeline-item.right .timeline-visual-deco {
         left: -95%;
     }
 }
 
 /* モバイル用：スタックして表示 */
 @media (max-width: 992px) {
-    #anniv100th .timeline-line {
+    .timeline-line {
         left: 18px;
         transform: none;
     }
 
-    #anniv100th .timeline-era-label {
+    .timeline-era-label {
         left: 20px;
         /* モバイルの線（20pxの位置）に合わせる */
         transform: translate(-50%, 0) scaleX(0);
         transform-origin: center;
     }
 
-    #anniv100th .timeline-era-label.fade-in-up {
+    .timeline-era-label.fade-in-up {
         transform: translate(-50%, 0) scaleX(0);
     }
 
-    #anniv100th .timeline-era-label.fade-in-up.is-visible {
+    .timeline-era-label.fade-in-up.is-visible {
         opacity: 1;
         transform: translate(-50%, 0) scaleX(1);
     }
 
     /* 平成ラベルのみ、表示の重なりを考慮し50%へ調整 */
-    #anniv100th .timeline-era-label.era-heisei {
+    .timeline-era-label.era-heisei {
         top: 50% !important;
     }
 
-    #anniv100th .timeline-visual-deco {
+    .timeline-visual-deco {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -451,7 +457,7 @@
         font-size: 0.85rem;
     }
 
-    #anniv100th .timeline-visual-deco .deco-title {
+    .timeline-visual-deco .deco-title {
         display: block;
         font-weight: 700;
         color: var(--primary-color);
@@ -465,20 +471,20 @@
 /* レスポンシブ対応 (モバイル・タブレット向け) */
 @media (max-width: 992px) {
 
-    #anniv100th .section-padding {
+    .section-padding {
 
         padding: 4rem 0;
     }
 
 
-    #anniv100th .timeline-line {
+    .timeline-line {
 
         left: 18px;
         transform: none;
     }
 
 
-    #anniv100th .timeline-item {
+    .timeline-item {
 
         width: 100%;
         padding-left: 50px;
@@ -490,15 +496,15 @@
     }
 
 
-    #anniv100th .timeline-item.left,
-    #anniv100th .timeline-item.right {
+    .timeline-item.left,
+    .timeline-item.right {
 
         left: 0;
         text-align: left;
     }
 
     /* 解説エリアを上部に配置 */
-    #anniv100th .timeline-visual-deco {
+    .timeline-visual-deco {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -518,7 +524,7 @@
         box-shadow: 0 5px 15px rgba(0, 64, 152, 0.1);
     }
 
-    #anniv100th .timeline-visual-deco .deco-title {
+    .timeline-visual-deco .deco-title {
         display: block;
         font-weight: 700;
         font-size: 1.1rem;
@@ -529,7 +535,7 @@
         width: 100%;
     }
 
-    #anniv100th .timeline-content-group {
+    .timeline-content-group {
         order: 2;
         position: relative;
         /* モバイルではカードと一緒に動くよう相対配置を維持 */
@@ -537,8 +543,8 @@
     }
 
     /* モバイル時もドットはカード（.timeline-content-group）の上端から15pxに固定 */
-    #anniv100th .timeline-item.left .timeline-dot,
-    #anniv100th .timeline-item.right .timeline-dot {
+    .timeline-item.left .timeline-dot,
+    .timeline-item.right .timeline-dot {
         left: -40px;
         /* 親のpadding-left: 50px - 40px = 10px(ドット左端) -> 中心は20px(線の位置) */
         right: auto;
@@ -547,8 +553,8 @@
     }
 
 
-    #anniv100th .timeline-item.left .timeline-content::before,
-    #anniv100th .timeline-item.right .timeline-content::before {
+    .timeline-item.left .timeline-content::before,
+    .timeline-item.right .timeline-content::before {
 
         left: -15px;
         right: auto;
@@ -557,13 +563,13 @@
     }
 
     /* モバイル表示時のアニメーション起点修正 */
-    #anniv100th .timeline-item.left .timeline-content,
-    #anniv100th .timeline-item.right .timeline-content {
+    .timeline-item.left .timeline-content,
+    .timeline-item.right .timeline-content {
         transform-origin: left 25px !important;
         clip-path: circle(0% at 0% 25px) !important;
     }
 
-    #anniv100th .timeline-item.is-visible .timeline-content {
+    .timeline-item.is-visible .timeline-content {
         clip-path: circle(125%) !important;
     }
 
