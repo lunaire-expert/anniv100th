@@ -1,3 +1,4 @@
+/* Scoped: vision.css | Wrapper: #anniv100th | 2026/4/2 14:57:43 */
 /* Scoped: vision.css | Wrapper: #anniv100th | 2026/4/2 14:56:25 */
 /* Scoped: vision.css | Wrapper: #anniv100th | 2026/4/2 13:36:19 */
 /* Scoped: vision.css | Wrapper: #anniv100th | 2026/3/27 17:03:07 */
@@ -5,6 +6,7 @@
 /* vision.css: LP最後の締めくくりとなる未来へのビジョンセクション */
 
 #anniv100th .vision-section {
+
 
 
 
@@ -23,8 +25,10 @@
 
 
 
+
 /* 背景の装飾を復活 */
 #anniv100th .vision-background {
+
 
 
 
@@ -42,7 +46,9 @@
 
 
 
+
 #anniv100th .vision-background::before {
+
 
 
 
@@ -61,7 +67,9 @@
 
 
 
+
 #anniv100th .vision-content {
+
 
 
 
@@ -76,7 +84,9 @@
 
 
 
+
 #anniv100th .vision-badge {
+
 
 
 
@@ -96,7 +106,9 @@
 
 
 
+
 #anniv100th .vision-title {
+
 
 
 
@@ -112,7 +124,9 @@
 
 
 
+
 #anniv100th .vision-text {
+
 
 
 
@@ -127,7 +141,9 @@
 
 
 
+
 #anniv100th .vision-cta-wrapper {
+
 
 
 
@@ -141,12 +157,15 @@
 
 
 
+
 @media (max-width: 768px) {
 
 
 
 
+
     #anniv100th .vision-section {
+
 
 
 
@@ -158,7 +177,9 @@
 
 
 
+
     #anniv100th .vision-title {
+
 
 
 
@@ -169,7 +190,9 @@
 
 
 
+
 }
+
 
 
 

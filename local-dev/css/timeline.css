@@ -574,3 +574,22 @@
     }
 
 }
+/* --- Timeline Progress Line Animation --- */
+.timeline-progress-line-fill {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4px;
+    height: 0; /* JSで制御 */
+    background: linear-gradient(to bottom, var(--primary-color) 0%, var(--primary-color) calc(var(--timeline-total-height) - 150px), rgba(255, 255, 255, 0) 100%);
+    z-index: 2;
+    transition: height 0.1s ease-out;
+}
+
+@media (max-width: 992px) {
+    .timeline-progress-line-fill {
+        left: 18px;
+        transform: none;
+    }
+}

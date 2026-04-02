@@ -1,3 +1,4 @@
+/* Scoped: hero.css | Wrapper: #anniv100th | 2026/4/2 14:57:43 */
 /* Scoped: hero.css | Wrapper: #anniv100th | 2026/4/2 14:56:25 */
 /* Scoped: hero.css | Wrapper: #anniv100th | 2026/4/2 13:36:19 */
 /* Scoped: hero.css | Wrapper: #anniv100th | 2026/3/27 17:03:06 */
@@ -5,6 +6,7 @@
 /* hero.css: Heroセクション固有のスタイル */
 
 #anniv100th .hero {
+
 
 
 
@@ -28,7 +30,9 @@
 
 
 
+
 #anniv100th .hero-background {
+
 
 
 
@@ -47,7 +51,9 @@
 
 
 
+
 #anniv100th .hero-video {
+
 
 
 
@@ -66,7 +72,9 @@
 
 
 
+
 #anniv100th #hero-particles {
+
 
 
 
@@ -85,7 +93,9 @@
 
 
 
+
 #anniv100th .hero-background::before {
+
 
 
 
@@ -106,7 +116,9 @@
 
 
 
+
 #anniv100th .hero-image-overlay {
+
 
 
 
@@ -126,7 +138,9 @@
 
 
 
+
 #anniv100th .hero-content {
+
 
 
 
@@ -144,7 +158,9 @@
 
 
 
+
 #anniv100th .hero-special-logo {
+
 
 
 
@@ -159,7 +175,9 @@
 
 
 
+
 #anniv100th .anniversary-logo-img {
+
 
 
 
@@ -174,7 +192,9 @@
 
 
 
+
 @keyframes logoFloat {
+
 
 
 
@@ -194,7 +214,9 @@
 
 
 
+
 #anniv100th .hero-title {
+
 
 
 
@@ -211,7 +233,9 @@
 
 
 
+
 #anniv100th .hero-bright-ver .hero-title {
+
 
 
 
@@ -223,7 +247,9 @@
 
 
 
+
 #anniv100th .hero-subtitle {
+
 
 
 
@@ -240,7 +266,9 @@
 
 
 
+
 #anniv100th .hero-actions {
+
 
 
 
@@ -254,8 +282,10 @@
 
 
 
+
 /* 各パーツの順次フェードイン設定 */
 #anniv100th .hero-special-logo, #anniv100th .hero-title, #anniv100th .hero-subtitle, #anniv100th .hero-actions {
+
 
 
 
@@ -268,7 +298,9 @@
 
 
 
+
 #anniv100th .hero-special-logo {
+
 
 
 
@@ -280,7 +312,9 @@
 
 
 
+
 #anniv100th .hero-title {
+
 
 
 
@@ -292,13 +326,16 @@
 
 
 
+
 #anniv100th .hero-subtitle {
+
 
 
 
 
     animation-delay: 3s; /* タイトルと同時に表示 */
 }
+
 
 
 
@@ -309,6 +346,7 @@
 
 
 
+
     animation-delay: 3s; /* タイトルと同時に表示 */
 }
 
@@ -316,8 +354,10 @@
 
 
 
+
 /* スクロールインジケーター */
 #anniv100th .scroll-indicator {
+
 
 
 
@@ -339,7 +379,9 @@
 
 
 
+
 #anniv100th .scroll-text {
+
 
 
 
@@ -354,7 +396,9 @@
 
 
 
+
 #anniv100th .scroll-line {
+
 
 
 
@@ -370,7 +414,9 @@
 
 
 
+
 #anniv100th .scroll-line::after {
+
 
 
 
@@ -389,8 +435,10 @@
 
 
 
+
 /* Animations */
 @keyframes fadeInUp {
+
 
 
 
@@ -410,7 +458,9 @@
 
 
 
+
 @keyframes scrollDown {
+
 
 
 
@@ -432,13 +482,16 @@
 
 
 
+
 /* Responsive */
 @media (max-width: 768px) {
 
 
 
 
+
     #anniv100th .hero {
+
 
 
 
@@ -452,7 +505,9 @@
 
 
 
+
     #anniv100th .hero-special-logo {
+
 
 
 
@@ -466,7 +521,9 @@
 
 
 
+
     #anniv100th .hero-title {
+
 
 
 
@@ -480,7 +537,9 @@
 
 
 
+
     #anniv100th .hero-subtitle {
+
 
 
 
@@ -494,7 +553,9 @@
 
 
 
+
     #anniv100th .hero-actions {
+
 
 
 
@@ -511,7 +572,9 @@
 
 
 
+
     #anniv100th .hero-actions .btn {
+
 
 
 
@@ -529,8 +592,10 @@
 
 
 
+
     /* 矢印は少しコンパクトにするのみ */
     #anniv100th .scroll-indicator {
+
 
 
 
@@ -542,7 +607,9 @@
 
 
 
+
     #anniv100th .scroll-line {
+
 
 
 
@@ -553,7 +620,9 @@
 
 
 
+
 }
+
 
 
 
@@ -565,7 +634,9 @@
 
 
 
+
     #anniv100th .hero {
+
 
 
 
@@ -577,7 +648,9 @@
 
 
 
+
     #anniv100th .hero-special-logo {
+
 
 
 
@@ -590,7 +663,9 @@
 
 
 
+
     #anniv100th .hero-title {
+
 
 
 
@@ -602,7 +677,9 @@
 
 
 
+
     #anniv100th .hero-actions {
+
 
 
 
@@ -613,7 +690,9 @@
 
 
 
+
 }
+
 
 
 

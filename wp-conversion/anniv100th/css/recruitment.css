@@ -1,3 +1,4 @@
+/* Scoped: recruitment.css | Wrapper: #anniv100th | 2026/4/2 14:57:43 */
 /* Scoped: recruitment.css | Wrapper: #anniv100th | 2026/4/2 14:56:25 */
 /* Scoped: recruitment.css | Wrapper: #anniv100th | 2026/4/2 13:36:19 */
 /* Scoped: recruitment.css | Wrapper: #anniv100th | 2026/3/27 17:03:07 */
@@ -6,6 +7,7 @@
    recruitment.css: 採用セクション固有のスタイル（ダブル・ダイアゴナル & セクションスライド）
    -------------------------------------------------------------------------- */
 #anniv100th .recruitment-section {
+
 
 
 
@@ -37,8 +39,10 @@
 
 
 
+
 /* 背景オーバーレイ（元の色を活かしつつ文字を際立たせる） */
 #anniv100th .recruitment-section::before {
+
 
 
 
@@ -57,7 +61,9 @@
 
 
 
+
 #anniv100th .recruitment-box {
+
 
 
 
@@ -70,8 +76,10 @@
 
 
 
+
 /* スクロール出現用クラス（セクション全体をスライド） */
 #anniv100th .recruitment-section.is-visible {
+
 
 
 
@@ -84,7 +92,9 @@
 
 
 
+
 #anniv100th .recruitment-box {
+
 
 
 
@@ -104,7 +114,9 @@
 
 
 
+
 #anniv100th .recruitment-label {
+
 
 
 
@@ -121,7 +133,9 @@
 
 
 
+
 #anniv100th .recruitment-title {
+
 
 
 
@@ -136,7 +150,9 @@
 
 
 
+
 #anniv100th .recruitment-text {
+
 
 
 
@@ -154,7 +170,9 @@
 
 
 
+
 #anniv100th .recruitment-action .btn-primary {
+
 
 
 
@@ -167,12 +185,15 @@
 
 
 
+
 @media (max-width: 768px) {
 
 
 
 
+
     #anniv100th .recruitment-section {
+
 
 
 
@@ -187,7 +208,9 @@
 
 
 
+
     #anniv100th .recruitment-title {
+
 
 
 
@@ -198,7 +221,9 @@
 
 
 
+
 }
+
 
 
 

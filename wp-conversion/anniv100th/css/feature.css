@@ -1,3 +1,4 @@
+/* Scoped: feature.css | Wrapper: #anniv100th | 2026/4/2 14:57:43 */
 /* Scoped: feature.css | Wrapper: #anniv100th | 2026/4/2 14:56:25 */
 /* Scoped: feature.css | Wrapper: #anniv100th | 2026/4/2 13:36:19 */
 /* Scoped: feature.css | Wrapper: #anniv100th | 2026/3/27 17:03:07 */
@@ -5,6 +6,7 @@
 /* feature.css: Feature（強み）セクション固有のスタイル */
 
 #anniv100th .feature-section {
+
 
 
 
@@ -17,7 +19,9 @@
 
 
 
+
 #anniv100th .feature-grid {
+
 
 
 
@@ -32,8 +36,10 @@
 
 
 
+
 /* Feature Card */
 #anniv100th .feature-card {
+
 
 
 
@@ -52,7 +58,9 @@
 
 
 
+
 #anniv100th .feature-card:hover {
+
 
 
 
@@ -65,9 +73,11 @@
 
 
 
+
 /* 中央のカードを少し下げる（動きのあるレイアウト）のスタイルは削除されました */
 
 #anniv100th .feature-image-wrapper {
+
 
 
 
@@ -81,7 +91,9 @@
 
 
 
+
 #anniv100th .feature-image-placeholder {
+
 
 
 
@@ -97,7 +109,9 @@
 
 
 
+
 #anniv100th .feature-card:hover .feature-image-placeholder {
+
 
 
 
@@ -109,8 +123,10 @@
 
 
 
+
 /* モックアップ用の背景色設定 */
 #anniv100th .gauze-bg {
+
 
 
 
@@ -125,7 +141,9 @@
 
 
 
+
 #anniv100th .down-bg {
+
 
 
 
@@ -140,7 +158,9 @@
 
 
 
+
 #anniv100th .oem-bg {
+
 
 
 
@@ -154,7 +174,9 @@
 
 
 
+
 #anniv100th .feature-icon {
+
 
 
 
@@ -182,7 +204,9 @@
 
 
 
+
 #anniv100th .feature-card:hover .feature-icon {
+
 
 
 
@@ -195,7 +219,9 @@
 
 
 
+
 #anniv100th .feature-content {
+
 
 
 
@@ -210,7 +236,9 @@
 
 
 
+
 #anniv100th .feature-title {
+
 
 
 
@@ -225,7 +253,9 @@
 
 
 
+
 #anniv100th .feature-description {
+
 
 
 
@@ -241,7 +271,9 @@
 
 
 
+
 #anniv100th .feature-cta {
+
 
 
 
@@ -254,7 +286,9 @@
 
 
 
+
 #anniv100th .btn-large {
+
 
 
 
@@ -268,13 +302,16 @@
 
 
 
+
 /* レスポンシブ対応 */
 @media (max-width: 992px) {
 
 
 
 
+
     #anniv100th .feature-grid {
+
 
 
 
@@ -285,7 +322,9 @@
 
 
 
+
 }
+
 
 
 
@@ -296,7 +335,9 @@
 
 
 
+
     #anniv100th .feature-grid {
+
 
 
 
@@ -309,7 +350,9 @@
 
 
 
+
 }
+
 
 
 
