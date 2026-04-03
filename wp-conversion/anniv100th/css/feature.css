@@ -1,18 +1,24 @@
-/* Scoped: feature.css | Wrapper: #anniv100th | 2026/4/3 10:02:27 */
-/* Scoped: feature.css | Wrapper: | 2026/3/27 10:55:35 */
+/* Scoped: feature.css | 2026-04-03T07:34:41.809Z */
+/* Scoped: feature.css | 2026/04/03 */
 /* feature.css: Feature（強み）セクション固有のスタイル */
 
+/**
+ * 1. セクション全体設定
+ */
 #anniv100th .feature-section {
 
     background-color: var(--bg-color);
-    padding-top: 6rem !important; /* 目次の前の呼吸を整える */
-    padding-bottom: 200px; /* RECRUITセクションとの重なり分、余白を広げてコンテンツを保護 */
+    padding-top: 6rem !important;
+    /* 目次の前の呼吸を整える */
+    padding-bottom: 200px;
+    /* RECRUITセクションとの重なり分、余白を広げてコンテンツを保護 */
 }
 
 
-
+/**
+ * 2. グリッドレイアウト
+ */
 #anniv100th .feature-grid {
-
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -25,14 +31,16 @@
 
     #anniv100th .feature-grid {
 
-        gap: 5rem; /* 余白をさらに広げてワイドな印象に */
+        gap: 5rem;
+        /* 余白をさらに広げてワイドな印象に */
     }
 
 }
 
 
-
-/* Feature Card */
+/**
+ * 3. フィーチャーカード (Feature Card)
+ */
 #anniv100th .feature-card {
 
 
@@ -52,7 +60,8 @@
 
 
     transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 40, 150, 0.1); /* プライマリーカラーを少し混ぜた影 */
+    box-shadow: 0 15px 40px rgba(0, 40, 150, 0.1);
+    /* プライマリーカラーを少し混ぜた影 */
 }
 
 
@@ -126,7 +135,8 @@
 
 
     position: absolute;
-    bottom: 20px; /* 見切れないように要素内に完全に収める */
+    bottom: 20px;
+    /* 見切れないように要素内に完全に収める */
     right: 20px;
     width: 50px;
     height: 50px;
@@ -203,7 +213,8 @@
 
     padding: 1.2rem 3rem;
     font-size: 1.1rem;
-    border-radius: 50px; /* 特殊なCTAなので丸みを強くする */
+    border-radius: 50px;
+    /* 特殊なCTAなので丸みを強くする */
 }
 
 
@@ -236,5 +247,3 @@
 
 
 }
-
-

@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "100周年記念LP",
   "scripts": {
-    "dev": "browser-sync start --server --port 3000 --files \"**/*\""
+    "dev": "browser-sync start --server --port 3000 --files \"**/*\"",
+    "build": "node build-wp.js"
   },
   "devDependencies": {
     "browser-sync": "^3.0.0"

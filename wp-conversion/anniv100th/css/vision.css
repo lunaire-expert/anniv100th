@@ -1,17 +1,20 @@
-/* Scoped: vision.css | Wrapper: #anniv100th | 2026/4/3 10:02:27 */
+/* Scoped: vision.css | 2026-04-03T07:34:42.092Z */
 /* Scoped: vision.css | Wrapper: | 2026/3/27 10:55:35 */
 /* vision.css: LP最後の締めくくりとなる未来へのビジョンセクション */
 
 #anniv100th .vision-section {
 
 
-    background-color: var(--primary-color); /* 背景を濃紺に戻す */
+    background-color: var(--primary-color);
+    /* 背景を濃紺に戻す */
     color: var(--text-white);
     text-align: center;
     position: relative;
     overflow: hidden;
-    margin-top: -150px; /* Recruitの斜め下部と重ねる */
-    padding-top: 18rem; /* 重なり分を含む上部余白 */
+    margin-top: -150px;
+    /* Recruitの斜め下部と重ねる */
+    padding-top: 18rem;
+    /* 重なり分を含む上部余白 */
     padding-bottom: 8rem;
 }
 
@@ -60,7 +63,8 @@
 
     #anniv100th .vision-content {
 
-        max-width: 1000px; /* 大画面ではコンテンツを少し広げ、ゆとりを持たせる */
+        max-width: 1000px;
+        /* 大画面ではコンテンツを少し広げ、ゆとりを持たせる */
     }
 
 }
@@ -135,5 +139,3 @@
 
 
 }
-
-

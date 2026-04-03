@@ -95,16 +95,18 @@
     text-align: center;
     color: var(--text-white);
     padding: 0 5%;
-    max-width: 1000px; /* PCでの基本最大幅を少し拡大 */
+    max-width: 1000px;
+    /* PCでの基本最大幅を少し拡大 */
 }
 
 @media (min-width: 1400px) {
     .hero-content {
         max-width: 1200px;
     }
-    
+
     .hero-title {
-        font-size: 4.5rem; /* 大画面ではタイトルをさらに強調 */
+        font-size: 4.5rem;
+        /* 大画面ではタイトルをさらに強調 */
     }
 }
 
@@ -178,7 +180,10 @@
 
 
 /* 各パーツの順次フェードイン設定 */
-.hero-special-logo, .hero-title, .hero-subtitle, .hero-actions {
+.hero-special-logo,
+.hero-title,
+.hero-subtitle,
+.hero-actions {
 
     opacity: 0;
     animation: fadeInUp 1.2s ease-out forwards;
@@ -187,25 +192,29 @@
 
 .hero-special-logo {
 
-    animation-delay: 1.5s; /* 最初にロゴを表示 */
+    animation-delay: 0.5s;
+    /* 最初にロゴを表示 */
 }
 
 
 .hero-title {
 
-    animation-delay: 3s; /* ロゴの次にタイトルを表示 */
+    animation-delay: 3s;
+    /* ロゴの次にタイトルを表示 */
 }
 
 
 .hero-subtitle {
 
-    animation-delay: 3s; /* タイトルと同時に表示 */
+    animation-delay: 3s;
+    /* タイトルと同時に表示 */
 }
 
 
 .hero-actions {
 
-    animation-delay: 3s; /* タイトルと同時に表示 */
+    animation-delay: 3s;
+    /* タイトルと同時に表示 */
 }
 
 
@@ -402,7 +411,7 @@
 }
 
 .hero-bright-ver .hero-image-overlay {
-    background: rgba(255, 255, 255, 0.6) !important;
+    background: radial-gradient(circle at 50% 43%, rgba(255, 255, 255, 0.8) 15%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%) !important;
 }
 
 .hero-bright-ver .hero-title {
@@ -413,7 +422,6 @@
 .hero-bright-ver .hero-subtitle {
     color: var(--primary-color) !important;
     text-shadow: none !important;
-    opacity: 1 !important;
 }
 
 .hero-bright-ver .scroll-indicator {

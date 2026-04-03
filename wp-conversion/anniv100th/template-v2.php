@@ -4,125 +4,21 @@
  */
 ?>
 <!DOCTYPE html>
-<html lang="ja">
-
+<html <?php language_attributes(); ?>>
 <head>
-    <meta charset="UTF-8">
+    <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>創立100周年記念 | 株式会社ルナール (Zzz Ver.)</title>
-    <meta name="description" content="株式会社ルナールは創立100周年を迎えました。100年の眠り、これからの100年。高品質なガーゼやダウン素材を用いた寝具のOEM開発。">
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&family=M+PLUS+Rounded+1c:wght@700&display=swap"
-        rel="stylesheet">
-
-    <!-- CSS (スコープ化済み個別ファイル) -->
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/variables.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/global.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/hero.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/timeline.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/feature.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/recruitment.css">
-    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/vision.css">
-    <style>
-        /* 明るい背景用のオーバーライド */
-        .hero-bright-ver,
-        .hero-bright-ver .hero-background {
-            background-color: #ffffff !important;
-        }
-
-        .hero-bright-ver .hero-background::before {
-            display: none;
-            /* 元のアクセントカラーの光を消す */
-        }
-
-        .hero-bright-ver .hero-image-overlay {
-            background: rgba(255, 255, 255, 0.6);
-        }
-
-
-        .hero-bright-ver .hero-subtitle {
-            color: var(--primary-color);
-            text-shadow: none;
-            /* 明るい背景では影を消したほうが綺麗 */
-        }
-
-        .hero-bright-ver .anniversary-logo-img {
-            /* 紺色のロゴに差し替えたため、フィルタは不要 */
-            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
-        }
-
-        .hero-bright-ver .scroll-indicator {
-            color: var(--primary-color);
-        }
-
-        .hero-bright-ver .scroll-line {
-            background: rgba(0, 64, 152, 0.2);
-        }
-
-        .hero-bright-ver .scroll-line::after {
-            background: var(--primary-color);
-        }
-
-        .hero-bright-ver .btn-outline {
-            border-color: var(--primary-color);
-            color: var(--primary-color);
-        }
-
-        .hero-bright-ver .btn-outline:hover {
-            background: var(--primary-color);
-            color: #fff;
-        }
-
-        /* 
-         * ヒーローセクション専用：順次フェードイン・アニメーション 
-         * ロゴ -> タイトル -> サブタイトル & ボタン の順に遅延（delay）をかけて表示。
-         */
-        .hero-bright-ver .hero-content {
-            animation: none;
-            /* 全体の一括アニメーションを無効化 */
-        }
-
-        .hero-bright-ver .hero-special-logo,
-        .hero-bright-ver .hero-title,
-        .hero-bright-ver .hero-subtitle,
-        .hero-bright-ver .hero-actions {
-            opacity: 0;
-            animation: fadeInUp 1.2s ease-out forwards;
-        }
-
-        .hero-bright-ver .hero-special-logo {
-            animation-delay: 1.5s;
-            /* ロード後、最初にロゴを表示 */
-        }
-
-        .hero-bright-ver .hero-title {
-            animation-delay: 3s;
-            /* ロゴの後にタイトルを表示 */
-        }
-
-        .hero-bright-ver .hero-subtitle {
-            animation-delay: 3s;
-            /* タイトルと同時に表示（お好みで調整可） */
-        }
-
-        .hero-bright-ver .hero-actions {
-            animation-delay: 3s;
-            /* 最後にボタンを表示 */
-        }
-    </style>
+    <?php wp_head(); ?>
 </head>
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
 
-<body>
     <div id="anniv100th">
         <!-- ヘッダー（既存サイトから流用想定のモックアップ） -->
         <header class="site-header">
             <div class="header-inner">
                 <div class="site-logo">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/logos/logo_mt_nv.svg" alt="Lunaire"
+                    <img src="<?php echo get_theme_file_uri('anniv100th'); ?>/images/logos/logo_mt_nv.svg" alt="Lunaire"
                         style="height: 32px; width: auto; vertical-align: middle;">
                 </div>
                 <nav class="global-nav">
@@ -136,18 +32,18 @@
         </header>
 
         <main>
-            <!-- Hero Section -->
+            <!-- Hero Section: 動画・パーティクル・キャッチコピーの配置 -->
             <section class="hero hero-bright-ver" id="hero">
                 <div class="hero-background">
                     <video class="hero-video" autoplay muted loop playsinline>
-                        <source src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/videos/hero-bg2.mp4" type="video/mp4">
+                        <source src="<?php echo get_theme_file_uri('anniv100th'); ?>/videos/hero-bg2.mp4" type="video/mp4">
                     </video>
                     <div class="hero-image-overlay"></div>
                     <canvas id="hero-particles"></canvas>
                 </div>
                 <div class="hero-content">
                     <div class="hero-special-logo">
-                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/logos/logo_100_navy.svg" alt="100th Anniversary Logo"
+                        <img src="<?php echo get_theme_file_uri('anniv100th'); ?>/images/logos/logo_100_navy.svg" alt="100th Anniversary Logo"
                             class="anniversary-logo-img">
                     </div>
                     <h1 class="hero-title">
@@ -163,14 +59,14 @@
                         <a href="#timeline" class="btn btn-outline">歴史を振り返る</a>
                     </div>
                 </div>
-                <!-- スクロールダウンインジケーター -->
+                <!-- スクロールを促すアニメーションパーツ -->
                 <div class="scroll-indicator">
                     <span class="scroll-text">Scroll</span>
                     <span class="scroll-line"></span>
                 </div>
             </section>
 
-            <!-- Message Section -->
+            <!-- Message Section: 代表者挨拶等のメッセージエリア -->
             <section id="message" class="message-section"
                 style="padding: 100px 0; background: var(--bg-color); text-align: center;">
                 <div class="container">
@@ -188,19 +84,20 @@
                 </div>
             </section>
 
-            <!-- Timeline Section -->
+            <!-- Timeline Section: 100年の歴史（スクロール連動ライン描画） -->
             <section id="timeline" class="timeline-section section-padding"
                 style="position: relative; background: transparent;">
+                <!-- 写真が切り替わるパララックス背景 -->
                 <div class="timeline-parallax-bg"
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; pointer-events: none;">
                     <div class="parallax-layer layer-1"
-                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/bg-founding.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 1;">
+                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_theme_file_uri('anniv100th'); ?>/images/bg-founding.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 1;">
                     </div>
                     <div class="parallax-layer layer-2"
-                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/bg-growth.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 2;">
+                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_theme_file_uri('anniv100th'); ?>/images/bg-growth.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 2;">
                     </div>
                     <div class="parallax-layer layer-3"
-                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/bg-future.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 3;">
+                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_theme_file_uri('anniv100th'); ?>/images/bg-future.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 3;">
                     </div>
                     <div class="parallax-overlay"
                         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(225, 225, 225, 0.7); z-index: 10;">
@@ -214,6 +111,7 @@
                     </div>
 
                     <div class="timeline-container">
+                        <!-- スクロールに連動して伸びる中心線 -->
                         <div class="timeline-line">
                             <div class="timeline-progress-line-fill"></div>
                         </div>
@@ -230,20 +128,14 @@
                                     <p class="timeline-text">
                                         京都府伏見にて創業。綿布団を中心とした寝具の製造・販売を開始。<br>誠実なものづくりを第一に、長年受け継がれる品質の基礎を築く。
                                     </p>
-                                    <div class="timeline-image-placeholder">創業時の写真</div>
+                                    <div class="timeline-image">
+                                        <img src="<?php echo get_theme_file_uri('anniv100th'); ?>/images/showaimage.webp" alt="創業時の写真" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 1rem;">
+                                    </div>
                                 </div>
                             </div>
                             <div class="timeline-visual-deco">
                                 <span class="deco-title">【大正】和の伝統寝具</span>
-                                それまで高級品だった「綿（わた）布団」が一般家庭に広く普及した時期
-
-                                主流: 敷き布団・掛け布団ともに木綿わた100%の和布団。
-
-                                特徴: 庶民もようやく「藁（わら）」ではなく、柔らかい綿で寝られるようになりました。
-
-                                枕: 伝統的な「そば殻枕」や、小さな箱状の枕が一般的。
-
-                                寝室: ほぼ100%が畳に布団を敷くスタイル。日中は押し入れに収納し、部屋を広く使う合理的な生活でした。
+                                それまで高級だった綿布団が一般に普及。畳にそば殻枕と木綿の和布団を敷き、昼は収納する合理的な生活でした。
                             </div>
                         </div>
 
@@ -308,7 +200,7 @@
                 </div>
             </section>
 
-            <!-- Feature Section -->
+            <!-- Feature Section: 強み・こだわり -->
             <section id="feature" class="feature-section section-padding">
                 <div class="container">
                     <div class="section-header">
@@ -318,7 +210,7 @@
                     <div class="feature-grid">
                         <div class="feature-card fade-in-up">
                             <div class="feature-image-wrapper">
-                                <div class="feature-image-placeholder gauze-bg"></div>
+                                <div class="feature-image-placeholder" style="background-image: url('<?php echo get_theme_file_uri('anniv100th'); ?>/images/mattress-topper-2.webp');"></div>
                                 <div class="feature-icon"><span>01</span></div>
                             </div>
                             <div class="feature-content">
@@ -328,7 +220,7 @@
                         </div>
                         <div class="feature-card fade-in-up">
                             <div class="feature-image-wrapper">
-                                <div class="feature-image-placeholder down-bg"></div>
+                                <div class="feature-image-placeholder" style="background-image: url('<?php echo get_theme_file_uri('anniv100th'); ?>/images/42.webp');"></div>
                                 <div class="feature-icon"><span>02</span></div>
                             </div>
                             <div class="feature-content">
@@ -355,9 +247,9 @@
                 </div>
             </section>
 
-            <!-- Recruitment Section -->
+            <!-- Recruitment Section: 採用情報エリア -->
             <section id="recruitment" class="recruitment-section section-padding"
-                style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/bg-recruit02.webp');">
+                style="background-image: url('<?php echo get_theme_file_uri('anniv100th'); ?>/images/bg-recruit02.webp');">
                 <div class="container">
                     <div class="recruitment-box">
                         <div class="recruitment-content">
@@ -375,7 +267,7 @@
                 </div>
             </section>
 
-            <!-- Vision Section (締めくくり) -->
+            <!-- Vision Section: 未来へのメッセージ（最後を飾るセクション） -->
             <section id="vision" class="vision-section section-padding">
                 <div class="vision-background"></div>
                 <div class="container vision-content">
@@ -403,11 +295,16 @@
             </section>
         </main>
 
+        <!-- Footer: フッターエリア -->
         <footer class="site-footer" style="padding: 2rem; background: #333; color: #fff; text-align: center;">
             <p>&copy; Lunaire Co.,Ltd. All Rights Reserved.</p>
         </footer>
 
         <script>
+            /**
+             * ページ内インタラクション・スクロール制御
+             * コンテンツの動的な表示やパーティクル演出を管理するメインロジック。
+             */
             document.addEventListener('DOMContentLoaded', () => {
                 /** 
                  * 読み込み時に勝手にスクロールされるのを防止する処理
@@ -539,7 +436,9 @@
                     animate();
                 }
 
-                // --- Timeline Parallax ---
+                /**
+                 * タイムライン背景のパララックス切り替え
+                 */
                 const timelineSection = wrapper.querySelector('#timeline');
                 const layers = wrapper.querySelectorAll('.parallax-layer');
                 if (timelineSection && layers.length >= 3) {
@@ -580,7 +479,9 @@
                     });
                 }
 
-                // --- Timeline Sequential Drawing ---
+                /**
+                 * タイムライン進行ラインの動的描画
+                 */
                 const timelineContainer = document.querySelector('.timeline-container');
                 const progressLineFill = document.querySelector('.timeline-progress-line-fill');
                 const eraLabels = document.querySelectorAll('.timeline-era-label');
@@ -588,21 +489,19 @@
 
                 function updateTimelineDrawing() {
                     if (!timelineContainer || !progressLineFill) return;
- 
                     const tRect = timelineContainer.getBoundingClientRect();
                     const vHeight = window.innerHeight;
- 
+
                     // コンテナの全高をCSS変数にセット（グラデーション計算用）
                     timelineContainer.style.setProperty('--timeline-total-height', tRect.height + 'px');
- 
+
                     // 描画開始基準点（画面上部から70%の位置）
                     const triggerPoint = vHeight * 0.7;
                     const scrollDistance = triggerPoint - tRect.top;
                     const timelineHeight = tRect.height;
- 
                     let drawProgress = Math.min(Math.max(scrollDistance / timelineHeight, 0), 1);
                     const currentLineHeight = timelineHeight * drawProgress;
- 
+
                     // ラインの長さを更新
                     progressLineFill.style.height = currentLineHeight + 'px';
 
@@ -627,6 +526,7 @@
                 updateTimelineDrawing();
             });
         </script>
-</body>
 
+<?php wp_footer(); ?>
+</body>
 </html>

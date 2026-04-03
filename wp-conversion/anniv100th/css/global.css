@@ -1,4 +1,4 @@
-/* Scoped: global.css | Wrapper: #anniv100th | 2026/4/3 10:02:26 */
+/* Scoped: global.css | 2026-04-03T07:34:41.849Z */
 /* Scoped: global.css | Wrapper: | 2026/3/27 10:55:35 */
 /* Reset & Base */
 * {
@@ -95,7 +95,8 @@ body {
 
     #anniv100th .message-text-wrapper {
 
-        max-width: 1000px; /* 大画面ではメッセージの幅も少し広げる */
+        max-width: 1000px;
+        /* 大画面ではメッセージの幅も少し広げる */
     }
 
 }
@@ -301,6 +302,7 @@ body {
 /* PC（大画面）向けフォントサイズ全体調整（ヒーロー以外） */
 @media (min-width: 993px) {
 
+
     /* セクションタイトル */
     #anniv100th .section-title {
 
@@ -343,10 +345,12 @@ body {
         font-size: 2.4rem !important;
     }
 
+
     #anniv100th .timeline-heading, #anniv100th .feature-title {
 
         font-size: 1.45rem !important;
     }
+
 
     #anniv100th .vision-title, #anniv100th .recruitment-title {
 
@@ -354,4 +358,3 @@ body {
     }
 
 }
-

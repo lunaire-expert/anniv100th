@@ -1,4 +1,4 @@
-/* Scoped: timeline.css | Wrapper: #anniv100th | 2026/4/3 10:02:27 */
+/* Scoped: timeline.css | 2026-04-03T07:34:42.057Z */
 /* Scoped: timeline.css | Wrapper: | 2026/3/27 10:55:35 */
 /* timeline.css: Timelineセクション固有のスタイル */
 
@@ -38,6 +38,9 @@
     margin-bottom: 0.5rem;
     position: relative;
     display: inline-block;
+    /* 白いぼかしのフチを追加 */
+    text-shadow: 0 0 10px rgba(255, 255, 255, 1),
+        0 0 10px rgba(255, 255, 255, 1);
 }
 
 
@@ -112,7 +115,8 @@
     transform: translateX(-50%);
     width: 4px;
     height: 100%;
-    background-color: #eee;
+    background-color: transparent;
+    /* 背景レールを非表示にする */
     z-index: 1;
 }
 
@@ -124,8 +128,9 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 0; /* JSで動的に制御 */
-    background-image: linear-gradient(to bottom, var(--primary-color) 0%, var(--primary-color) calc(var(--timeline-total-height) - 150px), rgba(255, 255, 255, 0) 100%);
+    height: 0;
+    /* JSで動的に制御 */
+    background-image: linear-gradient(to bottom, var(--primary-color) 0%, var(--primary-color) calc(var(--timeline-total-height) - 250px), #ffffff 100%);
     background-size: 100% var(--timeline-total-height);
     background-repeat: no-repeat;
     background-attachment: scroll;
@@ -266,7 +271,7 @@
     background-color: var(--bg-color);
     padding: 1.2rem;
     border-radius: 8px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.4);
     position: relative;
     border-top: 4px solid var(--primary-color);
 
@@ -464,15 +469,16 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: flex-start;
-        text-align: left;
+        align-items: center;
+        text-align: center;
         position: absolute;
         top: 2rem;
         width: 80%;
         min-height: 200px;
-        background-color: rgba(0, 64, 152, 0.8); /* 紺色背景を透明度0.8に調整 */
+        background-color: rgba(0, 64, 152, 0.8);
+        /* 紺色背景を透明度0.8に調整 */
         color: #ffffff;
-        border-radius: 12px;
+        border-radius: 200px;
         padding: 2.5rem;
         font-size: 0.95rem;
         line-height: 1.8;
@@ -561,7 +567,7 @@
         background-color: rgba(0, 64, 152, 0.03);
         border: 1px dashed rgba(0, 64, 152, 0.15);
         margin-top: 1rem;
-        border-radius: 8px;
+        border-radius: 200px;
         color: rgba(0, 64, 152, 0.6);
         font-size: 0.85rem;
     }
@@ -635,11 +641,12 @@
         width: 100%;
         min-height: auto;
         padding: 1.8rem;
-        background-color: rgba(0, 64, 152, 0.8); /* 紺色背景を透明度0.8に調整 */
+        background-color: rgba(0, 64, 152, 0.8);
+        /* 紺色背景を透明度0.8に調整 */
         color: #ffffff;
         margin-top: 0;
         margin-bottom: 1.5rem;
-        border-radius: 8px;
+        border-radius: 200px;
         font-size: 0.9rem;
         line-height: 1.7;
         order: 1;
@@ -707,6 +714,7 @@
 
 }
 
+
 /* --- Timeline Progress Line Animation --- */
 #anniv100th .timeline-progress-line-fill {
 
@@ -715,8 +723,9 @@
     left: 50%;
     transform: translateX(-50%);
     width: 4px;
-    height: 0; /* JSで制御 */
-    background: linear-gradient(to bottom, var(--primary-color) 0%, var(--primary-color) calc(var(--timeline-total-height) - 150px), rgba(255, 255, 255, 0) 100%);
+    height: 0;
+    /* JSで制御 */
+    background: linear-gradient(to bottom, var(--primary-color) 0%, var(--primary-color) calc(var(--timeline-total-height) - 400px), #ffffff 100%);
     z-index: 2;
     transition: height 0.1s ease-out;
 }
@@ -726,9 +735,8 @@
 
     #anniv100th .timeline-progress-line-fill {
 
-        left: 18px;
+        left: 0px;
         transform: none;
     }
 
 }
-

@@ -1,4 +1,4 @@
-/* Scoped: hero.css | Wrapper: #anniv100th | 2026/4/3 10:02:27 */
+/* Scoped: hero.css | 2026-04-03T07:34:41.905Z */
 /* Scoped: hero.css | Wrapper: | 2026/3/27 10:55:35 */
 /* hero.css: Heroセクション固有のスタイル */
 
@@ -109,7 +109,8 @@
     text-align: center;
     color: var(--text-white);
     padding: 0 5%;
-    max-width: 1000px; /* PCでの基本最大幅を少し拡大 */
+    max-width: 1000px;
+    /* PCでの基本最大幅を少し拡大 */
 }
 
 
@@ -120,10 +121,11 @@
         max-width: 1200px;
     }
 
-    
+
     #anniv100th .hero-title {
 
-        font-size: 4.5rem; /* 大画面ではタイトルをさらに強調 */
+        font-size: 4.5rem;
+        /* 大画面ではタイトルをさらに強調 */
     }
 
 }
@@ -225,7 +227,8 @@
 #anniv100th .hero-special-logo {
 
 
-    animation-delay: 1.5s; /* 最初にロゴを表示 */
+    animation-delay: 0.5s;
+    /* 最初にロゴを表示 */
 }
 
 
@@ -233,7 +236,8 @@
 #anniv100th .hero-title {
 
 
-    animation-delay: 3s; /* ロゴの次にタイトルを表示 */
+    animation-delay: 3s;
+    /* ロゴの次にタイトルを表示 */
 }
 
 
@@ -241,7 +245,8 @@
 #anniv100th .hero-subtitle {
 
 
-    animation-delay: 3s; /* タイトルと同時に表示 */
+    animation-delay: 3s;
+    /* タイトルと同時に表示 */
 }
 
 
@@ -249,7 +254,8 @@
 #anniv100th .hero-actions {
 
 
-    animation-delay: 3s; /* タイトルと同時に表示 */
+    animation-delay: 3s;
+    /* タイトルと同時に表示 */
 }
 
 
@@ -491,7 +497,7 @@
 
 #anniv100th .hero-bright-ver .hero-image-overlay {
 
-    background: rgba(255, 255, 255, 0.6) !important;
+    background: radial-gradient(circle at 50% 43%, rgba(255, 255, 255, 0.8) 15%, rgba(255, 255, 255, 0.7) 50%, rgba(255, 255, 255, 0) 100%) !important;
 }
 
 
@@ -506,7 +512,6 @@
 
     color: var(--primary-color) !important;
     text-shadow: none !important;
-    opacity: 1 !important;
 }
 
 
@@ -540,4 +545,3 @@
     background: var(--primary-color);
     color: #fff;
 }
-
