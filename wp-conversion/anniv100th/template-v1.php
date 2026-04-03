@@ -4,21 +4,38 @@
  */
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?>>
-<head>
-    <meta charset="<?php bloginfo('charset'); ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?php wp_head(); ?>
-</head>
-<body <?php body_class(); ?>>
-<?php wp_body_open(); ?>
+<html lang="ja">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>創立100周年記念 | 株式会社ルナール</title>
+    <meta name="description" content="株式会社ルナールは創立100周年を迎えました。100年の眠り、これからの100年。高品質なガーゼやダウン素材を用いた寝具のOEM開発。">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS (スコープ化済み個別ファイル) -->
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/variables.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/global.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/hero.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/timeline.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/feature.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/recruitment.css">
+    <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/css/vision.css">
+</head>
+
+<body>
     <div id="anniv100th">
         <!-- ヘッダー（既存サイトから流用想定のモックアップ） -->
         <header class="site-header">
             <div class="header-inner">
                 <div class="site-logo">
-                    <img src="<?php echo get_theme_file_uri('anniv100th'); ?>/images/logos/logo_mt_nv.svg" alt="Lunaire"
+                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/logos/logo_mt_nv.svg" alt="Lunaire"
                         style="height: 32px; width: auto; vertical-align: middle;">
                 </div>
                 <nav class="global-nav">
@@ -37,7 +54,7 @@
                 <div class="hero-background">
                     <!-- 背景動画: autoplay/muted/loop/playsinline（スマホ対応） -->
                     <video class="hero-video" autoplay muted loop playsinline>
-                        <source src="<?php echo get_theme_file_uri('anniv100th'); ?>/videos/hero-bg.mp4" type="video/mp4">
+                        <source src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/videos/hero-bg.mp4" type="video/mp4">
                     </video>
                     <!-- オーバーレイ: 動画の色調調整とテキストの可読性向上用 -->
                     <div class="hero-image-overlay"></div>
@@ -46,7 +63,7 @@
                 </div>
                 <div class="hero-content">
                     <div class="hero-special-logo">
-                        <img src="<?php echo get_theme_file_uri('anniv100th'); ?>/images/logos/logo_100_w.svg"
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/logos/logo_100_w.svg"
                             alt="100th Anniversary Logo" class="anniversary-logo-img">
                     </div>
                     <h1 class="hero-title">
@@ -96,15 +113,15 @@
                     style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; overflow: hidden; pointer-events: none;">
                     <!-- layer-1: 創業期（セクション開始〜） -->
                     <div class="parallax-layer layer-1"
-                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_theme_file_uri('anniv100th'); ?>/images/bg-founding.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 1;">
+                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/bg-founding.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 1;">
                     </div>
                     <!-- layer-2: 成長期（セクション中間） -->
                     <div class="parallax-layer layer-2"
-                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_theme_file_uri('anniv100th'); ?>/images/bg-growth.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 2;">
+                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/bg-growth.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 2;">
                     </div>
                     <!-- layer-3: 未来（セクション末尾） -->
                     <div class="parallax-layer layer-3"
-                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_theme_file_uri('anniv100th'); ?>/images/bg-future.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 3;">
+                        style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/bg-future.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 3;">
                     </div>
                     <!-- 可読性オーバーレイ: 背景画像が濃い場合に文字を見やすくするためのフィルター層 -->
                     <div class="parallax-overlay"
@@ -243,7 +260,7 @@
 
             <!-- Recruitment Section: 採用情報（前のセクションと斜めに重なるデザイン） -->
             <section id="recruitment" class="recruitment-section section-padding"
-                style="background-image: url('<?php echo get_theme_file_uri('anniv100th'); ?>/images/bg-recruit01.webp');">
+                style="background-image: url('<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/bg-recruit01.webp');">
                 <div class="container">
                     <div class="recruitment-box">
                         <div class="recruitment-content">
@@ -512,7 +529,6 @@
             });
         </script>
     </div>
-
-<?php wp_footer(); ?>
 </body>
+
 </html>
