@@ -390,3 +390,50 @@
     }
 
 }
+
+/* --- Structure: Bright Version (v2) Support --- */
+.hero-bright-ver,
+.hero-bright-ver .hero-background {
+    background-color: #ffffff !important;
+}
+
+.hero-bright-ver .hero-background::before {
+    display: none;
+}
+
+.hero-bright-ver .hero-image-overlay {
+    background: rgba(255, 255, 255, 0.6) !important;
+}
+
+.hero-bright-ver .hero-title {
+    color: var(--primary-color) !important;
+    text-shadow: none !important;
+}
+
+.hero-bright-ver .hero-subtitle {
+    color: var(--primary-color) !important;
+    text-shadow: none !important;
+    opacity: 1 !important;
+}
+
+.hero-bright-ver .scroll-indicator {
+    color: var(--primary-color);
+}
+
+.hero-bright-ver .scroll-line {
+    background: rgba(0, 64, 152, 0.2);
+}
+
+.hero-bright-ver .scroll-line::after {
+    background: var(--primary-color);
+}
+
+.hero-bright-ver .btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.hero-bright-ver .btn-outline:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
