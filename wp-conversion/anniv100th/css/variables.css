@@ -1,13 +1,5 @@
-/* Scoped: variables.css | Wrapper: #anniv100th | 2026/4/2 14:57:42 */
-/* Scoped: variables.css | Wrapper: #anniv100th | 2026/4/2 14:56:24 */
-/* Scoped: variables.css | Wrapper: #anniv100th | 2026/4/2 13:36:19 */
-/* Scoped: variables.css | Wrapper: #anniv100th | 2026/3/27 17:03:06 */
-/* Scoped: variables.css | Wrapper: #anniv100th | 2026/3/27 10:55:34 */
-/* variables.css: デザインシステムの定義 */
+/* Scoped: variables.css | Wrapper: #anniv100th | 2026/4/3 9:32:18 */
 #anniv100th {
-
-
-
 
 
     /* Colors */
@@ -43,6 +35,24 @@
 }
 
 
+/* Large screens (Wider layout) */
+@media (min-width: 1400px) {
 
+    #anniv100th {
+
+        --container-width: 1400px;
+    }
+
+}
+
+
+@media (min-width: 1600px) {
+
+    #anniv100th {
+
+        --container-width: 1560px;
+    }
+
+}
 
 

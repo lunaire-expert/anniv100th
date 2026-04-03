@@ -1,14 +1,8 @@
-/* Scoped: hero.css | Wrapper: #anniv100th | 2026/4/2 14:57:43 */
-/* Scoped: hero.css | Wrapper: #anniv100th | 2026/4/2 14:56:25 */
-/* Scoped: hero.css | Wrapper: #anniv100th | 2026/4/2 13:36:19 */
-/* Scoped: hero.css | Wrapper: #anniv100th | 2026/3/27 17:03:06 */
-/* Scoped: hero.css | Wrapper: #anniv100th | 2026/3/27 10:55:35 */
+/* Scoped: hero.css | Wrapper: #anniv100th | 2026/4/3 9:32:18 */
+/* Scoped: hero.css | Wrapper: | 2026/3/27 10:55:35 */
 /* hero.css: Heroセクション固有のスタイル */
 
 #anniv100th .hero {
-
-
-
 
 
     position: relative;
@@ -28,13 +22,7 @@
 
 
 
-
-
-
 #anniv100th .hero-background {
-
-
-
 
 
     position: absolute;
@@ -49,13 +37,7 @@
 
 
 
-
-
-
 #anniv100th .hero-video {
-
-
-
 
 
     position: absolute;
@@ -70,13 +52,7 @@
 
 
 
-
-
-
 #anniv100th #hero-particles {
-
-
-
 
 
     position: absolute;
@@ -91,13 +67,7 @@
 
 
 
-
-
-
 #anniv100th .hero-background::before {
-
-
-
 
 
     content: '';
@@ -114,13 +84,7 @@
 
 
 
-
-
-
 #anniv100th .hero-image-overlay {
-
-
-
 
 
     position: absolute;
@@ -136,13 +100,7 @@
 
 
 
-
-
-
 #anniv100th .hero-content {
-
-
-
 
 
     position: relative;
@@ -151,18 +109,28 @@
     text-align: center;
     color: var(--text-white);
     padding: 0 5%;
-    max-width: 900px;
+    max-width: 1000px; /* PCでの基本最大幅を少し拡大 */
+}
+
+
+@media (min-width: 1400px) {
+
+    #anniv100th .hero-content {
+
+        max-width: 1200px;
+    }
+
+    
+    #anniv100th .hero-title {
+
+        font-size: 4.5rem; /* 大画面ではタイトルをさらに強調 */
+    }
+
 }
 
 
 
-
-
-
 #anniv100th .hero-special-logo {
-
-
-
 
 
     display: inline-block;
@@ -173,13 +141,7 @@
 
 
 
-
-
-
 #anniv100th .anniversary-logo-img {
-
-
-
 
 
     width: 100%;
@@ -190,13 +152,7 @@
 
 
 
-
-
-
 @keyframes logoFloat {
-
-
-
 
 
 
@@ -212,13 +168,7 @@
 
 
 
-
-
-
 #anniv100th .hero-title {
-
-
-
 
 
     font-size: 3.5rem;
@@ -231,13 +181,7 @@
 
 
 
-
-
-
 #anniv100th .hero-bright-ver .hero-title {
-
-
-
 
 
     color: rgb(0 64 153);
@@ -245,13 +189,7 @@
 
 
 
-
-
-
 #anniv100th .hero-subtitle {
-
-
-
 
 
     font-size: 1.25rem;
@@ -264,13 +202,7 @@
 
 
 
-
-
-
 #anniv100th .hero-actions {
-
-
-
 
 
     display: flex;
@@ -280,14 +212,8 @@
 
 
 
-
-
-
 /* 各パーツの順次フェードイン設定 */
 #anniv100th .hero-special-logo, #anniv100th .hero-title, #anniv100th .hero-subtitle, #anniv100th .hero-actions {
-
-
-
 
 
     opacity: 0;
@@ -296,13 +222,7 @@
 
 
 
-
-
-
 #anniv100th .hero-special-logo {
-
-
-
 
 
     animation-delay: 1.5s; /* 最初にロゴを表示 */
@@ -310,13 +230,7 @@
 
 
 
-
-
-
 #anniv100th .hero-title {
-
-
-
 
 
     animation-delay: 3s; /* ロゴの次にタイトルを表示 */
@@ -324,42 +238,24 @@
 
 
 
-
-
-
 #anniv100th .hero-subtitle {
-
-
-
 
 
     animation-delay: 3s; /* タイトルと同時に表示 */
 }
-
-
-
 
 
 
 #anniv100th .hero-actions {
 
 
-
-
-
     animation-delay: 3s; /* タイトルと同時に表示 */
 }
 
 
 
-
-
-
 /* スクロールインジケーター */
 #anniv100th .scroll-indicator {
-
-
-
 
 
     position: absolute;
@@ -377,13 +273,7 @@
 
 
 
-
-
-
 #anniv100th .scroll-text {
-
-
-
 
 
     font-size: 0.8rem;
@@ -394,13 +284,7 @@
 
 
 
-
-
-
 #anniv100th .scroll-line {
-
-
-
 
 
     width: 1px;
@@ -412,13 +296,7 @@
 
 
 
-
-
-
 #anniv100th .scroll-line::after {
-
-
-
 
 
     content: '';
@@ -433,14 +311,8 @@
 
 
 
-
-
-
 /* Animations */
 @keyframes fadeInUp {
-
-
-
 
 
     from {
@@ -456,13 +328,7 @@
 
 
 
-
-
-
 @keyframes scrollDown {
-
-
-
 
 
     0% {
@@ -480,20 +346,11 @@
 
 
 
-
-
-
 /* Responsive */
 @media (max-width: 768px) {
 
 
-
-
-
     #anniv100th .hero {
-
-
-
 
 
         padding-top: 60px;
@@ -503,13 +360,7 @@
 
 
 
-
-
-
     #anniv100th .hero-special-logo {
-
-
-
 
 
         max-width: 320px;
@@ -519,13 +370,7 @@
 
 
 
-
-
-
     #anniv100th .hero-title {
-
-
-
 
 
         font-size: 2.25rem;
@@ -535,13 +380,7 @@
 
 
 
-
-
-
     #anniv100th .hero-subtitle {
-
-
-
 
 
         font-size: 0.95rem;
@@ -551,13 +390,7 @@
 
 
 
-
-
-
     #anniv100th .hero-actions {
-
-
-
 
 
         flex-direction: row;
@@ -570,13 +403,7 @@
 
 
 
-
-
-
     #anniv100th .hero-actions .btn {
-
-
-
 
 
         flex: 1;
@@ -590,14 +417,8 @@
 
 
 
-
-
-
     /* 矢印は少しコンパクトにするのみ */
     #anniv100th .scroll-indicator {
-
-
-
 
 
         bottom: 20px;
@@ -605,26 +426,14 @@
 
 
 
-
-
-
     #anniv100th .scroll-line {
-
-
-
 
 
         height: 40px;
     }
 
 
-
-
-
 }
-
-
-
 
 
 
@@ -632,13 +441,7 @@
 @media (max-height: 700px) {
 
 
-
-
-
     #anniv100th .hero {
-
-
-
 
 
         padding-bottom: 80px;
@@ -646,13 +449,7 @@
 
 
 
-
-
-
     #anniv100th .hero-special-logo {
-
-
-
 
 
         max-width: 320px;
@@ -661,13 +458,7 @@
 
 
 
-
-
-
     #anniv100th .hero-title {
-
-
-
 
 
         font-size: 1.8rem;
@@ -675,24 +466,12 @@
 
 
 
-
-
-
     #anniv100th .hero-actions {
-
-
-
 
 
         gap: 0.5rem;
     }
 
 
-
-
-
 }
-
-
-
 

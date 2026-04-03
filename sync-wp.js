@@ -10,6 +10,7 @@ const path = require('path');
  * 出力先: wp-conversion/lunaire-100th-anniversary/css/scoped/
  */
 
+const sourceDir = path.join(__dirname, 'local-dev');
 const targetDir = path.join(__dirname, 'wp-conversion', 'anniv100th');
 const wrapperID = '#anniv100th';
 
@@ -186,8 +187,12 @@ function scopeCSS(css) {
 
 function scopeIndividualFiles() {
     try {
-        const cssBaseDir = path.join(targetDir, 'css');
-        const scopedDir = cssBaseDir; // 直下に出力
+        const srcCssDir = path.join(sourceDir, 'css');
+        const destCssDir = path.join(targetDir, 'css');
+
+        if (!fs.existsSync(destCssDir)) {
+            fs.mkdirSync(destCssDir, { recursive: true });
+        }
 
         const cssFiles = [
             'variables.css',
@@ -200,15 +205,15 @@ function scopeIndividualFiles() {
         ];
 
         cssFiles.forEach(file => {
-            const filePath = path.join(cssBaseDir, file);
+            const filePath = path.join(srcCssDir, file);
             if (fs.existsSync(filePath)) {
                 console.log(`Scoping: ${file}`);
                 const content = fs.readFileSync(filePath, 'utf8');
                 const header = `/* Scoped: ${file} | Wrapper: ${wrapperID} | ${new Date().toLocaleString()} */\n`;
                 const scoped = header + scopeCSS(content);
-                const outputPath = path.join(scopedDir, file);
+                const outputPath = path.join(destCssDir, file);
                 fs.writeFileSync(outputPath, scoped);
-                console.log(`  -> css/${file}`);
+                console.log(`  -> wp-conversion/anniv100th/css/${file}`);
             } else {
                 console.warn(`Warning: ${file} not found, skipped.`);
             }
