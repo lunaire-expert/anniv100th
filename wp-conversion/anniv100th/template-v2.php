@@ -377,7 +377,19 @@
 
             <!-- Vision Section: 未来へのメッセージ（最後を飾るセクション） -->
             <section id="vision" class="vision-section section-padding">
-                <div class="vision-background"></div>
+                <div class="vision-background">
+                    <div class="vision-orb vision-orb-1"></div>
+                    <div class="vision-orb vision-orb-2"></div>
+                    <!-- 波状の装飾レイヤー -->
+                    <div class="vision-waves">
+                        <div class="vision-wave wave-1"></div>
+                        <div class="vision-wave wave-2"></div>
+                        <div class="vision-wave wave-3"></div>
+                    </div>
+                    <div class="vision-watermark-wrapper">
+                        <img src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/logos/logo_mt_nv.svg" alt="" class="vision-watermark" loading="lazy">
+                    </div>
+                </div>
                 <div class="container vision-content">
                     <div class="vision-badge fade-in-up">OUR PROMISE</div>
                     <h2 class="vision-title fade-in-up">
@@ -632,6 +644,37 @@
                 window.addEventListener('scroll', updateTimelineDrawing);
                 window.addEventListener('resize', updateTimelineDrawing);
                 updateTimelineDrawing();
+
+                // --- Vision Logo Scroll Inertia ---
+                const visionSection = document.getElementById('vision');
+                const watermark = document.querySelector('.vision-watermark');
+                if (visionSection && watermark) {
+                    let currentY = 0;
+                    let targetY = 0;
+                    const lerpFactor = 0.08; // 追従の滑らかさ（小さいほど遅れる）
+
+                    function animateLogo() {
+                        const rect = visionSection.getBoundingClientRect();
+                        const viewHeight = window.innerHeight;
+                        const time = Date.now() * 0.001; // フローティング用の時間軸
+
+                        if (rect.top < viewHeight && rect.bottom > 0) {
+                            // 中心点からの距離に応じたスクロール慣性（振幅を少し強めに）
+                            targetY = (viewHeight / 2 - (rect.top + rect.height / 2)) * 0.12;
+                        }
+
+                        currentY += (targetY - currentY) * lerpFactor;
+                        
+                        // 微小な浮遊感（サイン波）を合成
+                        const floatY = Math.sin(time * 0.8) * 10;
+                        const scale = 1 + Math.sin(time * 0.5) * 0.02;
+
+                        watermark.style.transform = `translate3d(0, ${currentY + floatY}px, 0) scale(${scale})`;
+
+                        requestAnimationFrame(animateLogo);
+                    }
+                    animateLogo();
+                }
             });
         </script>
 </body>
