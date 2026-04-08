@@ -89,7 +89,7 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 4px;
+    width: 2px;
     height: 100%;
     background-color: transparent;
     /* 背景レールを非表示にする */
@@ -185,7 +185,8 @@
     border-radius: 50%;
     background-color: #ffffff;
     /* 不透明な白 */
-    border: 4px solid var(--primary-color);
+    border: 2px solid #997949;
+    /* 深みのあるゴールド */
     z-index: 20;
     /* 線の前 */
     transition: background-color var(--transition-fast);
@@ -275,8 +276,8 @@
 
 /* コンテンツ内の要素 */
 .timeline-year {
-
-    font-size: 2rem;
+    font-family: var(--font-family-serif);
+    font-size: 2.8rem;
     font-weight: 700;
     color: var(--secondary-color);
     margin-bottom: 0.5rem;
@@ -285,8 +286,8 @@
 
 
 .timeline-year span {
-
-    font-size: 1rem;
+    font-family: var(--font-family-serif);
+    font-size: 1.2rem;
     margin-left: 0.2rem;
     color: var(--text-light);
 }
@@ -331,8 +332,8 @@
     transform: translate(-50%, 0) scaleX(0);
     /* 最初は横幅ゼロ */
     transform-origin: center;
-    background-color: var(--primary-color);
-    /* 紺色（不透明） */
+    background-color: #997949;
+    /* 深みのあるゴールド */
     color: #fff;
     /* 文字色は白 */
     padding: 0.6rem 1.5rem;
@@ -386,14 +387,14 @@
         top: 2rem;
         width: 80%;
         min-height: 200px;
-        background-color: rgba(0, 64, 152, 0.8);
-        /* 紺色背景を透明度0.8に調整 */
+        background-color: rgba(153, 121, 73, 0.85);
+        /* 深みのあるゴールド、不透明度0.85 */
         color: #ffffff;
         border-radius: 200px;
         padding: 2.5rem;
         font-size: 0.95rem;
         line-height: 1.8;
-        box-shadow: 0 10px 30px rgba(0, 64, 152, 0.1);
+        box-shadow: 0 10px 30px rgba(0, 39, 91, 0.1);
     }
 
     .timeline-visual-deco .deco-title {
@@ -455,11 +456,11 @@
         width: 100%;
         min-height: auto;
         padding: 1.5rem;
-        background-color: rgba(0, 64, 152, 0.03);
-        border: 1px dashed rgba(0, 64, 152, 0.15);
+        background-color: rgba(0, 39, 91, 0.03);
+        border: 1px dashed rgba(0, 39, 91, 0.15);
         margin-top: 1rem;
         border-radius: 200px;
-        color: rgba(0, 64, 152, 0.6);
+        color: rgba(0, 39, 91, 0.6);
         font-size: 0.85rem;
     }
 
@@ -519,8 +520,8 @@
         width: 100%;
         min-height: auto;
         padding: 1.8rem;
-        background-color: rgba(0, 64, 152, 0.8);
-        /* 紺色背景を透明度0.8に調整 */
+        background-color: rgba(153, 121, 73, 0.85);
+        /* 深みのあるゴールド、不透明度0.85 */
         color: #ffffff;
         margin-top: 0;
         margin-bottom: 1.5rem;
@@ -528,7 +529,7 @@
         font-size: 0.9rem;
         line-height: 1.7;
         order: 1;
-        box-shadow: 0 5px 15px rgba(0, 64, 152, 0.1);
+        box-shadow: 0 5px 15px rgba(153, 121, 73, 0.1);
     }
 
     .timeline-visual-deco .deco-title {
@@ -588,10 +589,10 @@
     top: 0;
     left: 50%;
     transform: translateX(-50%);
-    width: 4px;
+    width: 2px;
     height: 0;
     /* JSで制御 */
-    background: linear-gradient(to bottom, var(--primary-color) 0%, var(--primary-color) calc(var(--timeline-total-height) - 400px), #ffffff 100%);
+    background: linear-gradient(to bottom, #997949 0%, #997949 calc(var(--timeline-total-height) - 400px), #ffffff 100%);
     z-index: 2;
     transition: height 0.1s ease-out;
 }

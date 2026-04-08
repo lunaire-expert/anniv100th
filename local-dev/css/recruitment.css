@@ -62,8 +62,8 @@
     border-radius: 20px;
     padding: 5rem 3rem;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0, 64, 152, 0.08);
-    border: 1px solid rgba(0, 64, 152, 0.05);
+    box-shadow: 0 20px 50px rgba(0, 39, 91, 0.08);
+    border: 1px solid rgba(0, 39, 91, 0.05);
     position: relative;
     max-width: 900px;
     margin: 0 auto;
@@ -89,6 +89,10 @@
     line-height: 1.3;
 }
 
+    .recruitment-box {
+        padding: 3rem 1.5rem;
+    }
+
 
 .recruitment-text {
 
@@ -105,7 +109,7 @@
 .recruitment-action .btn-primary {
 
     padding: 1.2rem 3.5rem;
-    box-shadow: 0 10px 20px rgba(0, 64, 152, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 39, 91, 0.15);
 }
 
 
@@ -123,6 +127,10 @@
     .recruitment-title {
 
         font-size: 1.8rem;
+    }
+
+    .recruitment-box {
+        padding: 3rem 1.5rem;
     }
 
 }

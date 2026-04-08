@@ -1,4 +1,4 @@
-/* Scoped: recruitment.css | Wrapper: #anniv100th | 2026/4/6 17:05:50 */
+/* Scoped: recruitment.css | Wrapper: #anniv100th | 2026/4/8 14:01:38 */
 /* Scoped: recruitment.css | Wrapper: | 2026/3/27 10:55:35 */
 /* --------------------------------------------------------------------------
    recruitment.css: 採用セクション固有のスタイル（ダブル・ダイアゴナル & セクションスライド）
@@ -72,8 +72,8 @@
     border-radius: 20px;
     padding: 5rem 3rem;
     text-align: center;
-    box-shadow: 0 20px 50px rgba(0, 64, 152, 0.08);
-    border: 1px solid rgba(0, 64, 152, 0.05);
+    box-shadow: 0 20px 50px rgba(0, 39, 91, 0.08);
+    border: 1px solid rgba(0, 39, 91, 0.05);
     position: relative;
     max-width: 900px;
     margin: 0 auto;
@@ -104,6 +104,12 @@
 }
 
 
+    #anniv100th .recruitment-box {
+
+        padding: 3rem 1.5rem;
+    }
+
+
 
 #anniv100th .recruitment-text {
 
@@ -123,7 +129,7 @@
 
 
     padding: 1.2rem 3.5rem;
-    box-shadow: 0 10px 20px rgba(0, 64, 152, 0.15);
+    box-shadow: 0 10px 20px rgba(0, 39, 91, 0.15);
 }
 
 
@@ -146,6 +152,12 @@
 
 
         font-size: 1.8rem;
+    }
+
+
+    #anniv100th .recruitment-box {
+
+        padding: 3rem 1.5rem;
     }
 
 

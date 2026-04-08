@@ -5,7 +5,7 @@
  * 1. セクション全体設定
  */
 .feature-section {
-    background-color: var(--bg-color);
+    background-color: #fdfcf8;
     padding-top: 6rem !important;
     /* 目次の前の呼吸を整える */
     padding-bottom: 200px;
@@ -101,7 +101,7 @@
 .oem-bg {
 
     background-color: #e6e6e6;
-    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 64, 152, 0.05) 25%, rgba(0, 64, 152, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 64, 152, 0.05) 75%, rgba(0, 64, 152, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 64, 152, 0.05) 25%, rgba(0, 64, 152, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 64, 152, 0.05) 75%, rgba(0, 64, 152, 0.05) 76%, transparent 77%, transparent);
+    background-image: linear-gradient(0deg, transparent 24%, rgba(0, 39, 91, 0.05) 25%, rgba(0, 39, 91, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 39, 91, 0.05) 75%, rgba(0, 39, 91, 0.05) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(0, 39, 91, 0.05) 25%, rgba(0, 39, 91, 0.05) 26%, transparent 27%, transparent 74%, rgba(0, 39, 91, 0.05) 75%, rgba(0, 39, 91, 0.05) 76%, transparent 77%, transparent);
     background-size: 40px 40px;
 }
 
@@ -123,7 +123,7 @@
     font-size: 1.2rem;
     font-weight: 700;
     font-family: Georgia, serif;
-    box-shadow: 0 5px 15px rgba(0, 64, 152, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 39, 91, 0.3);
     z-index: 2;
     transition: background-color var(--transition-fast);
 }
@@ -132,7 +132,7 @@
 .feature-card:hover .feature-icon {
 
     background-color: var(--secondary-color);
-    box-shadow: 0 5px 15px rgba(240, 131, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(196, 167, 125, 0.3);
 }
 
 

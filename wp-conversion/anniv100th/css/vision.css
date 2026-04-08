@@ -1,4 +1,4 @@
-/* Scoped: vision.css | Wrapper: #anniv100th | 2026/4/6 17:05:50 */
+/* Scoped: vision.css | Wrapper: #anniv100th | 2026/4/8 14:01:38 */
 /* Scoped: vision.css | Wrapper: | 2026/3/27 10:55:35 */
 /* vision.css: LP最後の締めくくりとなる未来へのビジョンセクション */
 
@@ -30,7 +30,7 @@
     width: 100%;
     height: 100%;
     z-index: 1;
-    background: linear-gradient(-45deg, #001f4d, #004098, #002b66, #00102b);
+    background: linear-gradient(-45deg, #001f4d, #00275b, #002b66, #00102b);
     background-size: 400% 400%;
     animation: gradientMoveBg 15s ease infinite;
 }

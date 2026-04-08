@@ -67,7 +67,7 @@
     right: 0;
     bottom: 0;
     background-image: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.1) 0%, transparent 60%),
-        radial-gradient(circle at 20% 80%, rgba(240, 131, 0, 0.05) 0%, transparent 50%);
+        radial-gradient(circle at 20% 80%, rgba(196, 167, 125, 0.05) 0%, transparent 50%);
     /* アクセントカラーのほのかな光 */
     z-index: 1;
 }
@@ -81,7 +81,7 @@
     width: 100%;
     height: 100%;
     /* ネイビーの色味を維持しつつ、動画が見えるように透過度を調整 (0.7) */
-    background: linear-gradient(135deg, rgba(0, 31, 77, 0.7) 0%, rgba(0, 64, 152, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(0, 31, 77, 0.7) 0%, rgba(0, 39, 91, 0.7) 100%);
     z-index: 2;
     /* 動画の上、粒子の下 */
 }
@@ -429,7 +429,7 @@
 }
 
 .hero-bright-ver .scroll-line {
-    background: rgba(0, 64, 152, 0.2);
+    background: rgba(0, 39, 91, 0.2);
 }
 
 .hero-bright-ver .scroll-line::after {

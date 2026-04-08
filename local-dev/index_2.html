@@ -11,7 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;700&family=M+PLUS+Rounded+1c:wght@700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Shippori+Mincho:wght@400;700&family=M+PLUS+Rounded+1c:wght@700&display=swap"
         rel="stylesheet">
 
     <!-- CSS: 各セクションの機能を定義する外部ファイル群 -->
@@ -44,6 +44,7 @@
         }
 
         .hero-bright-ver .hero-subtitle {
+            font-family: var(--font-family-serif);
             color: var(--primary-color);
             text-shadow: none;
             /* 白背景での視認性向上のためシャドウを除去 */
@@ -59,7 +60,7 @@
         }
 
         .hero-bright-ver .scroll-line {
-            background: rgba(0, 64, 152, 0.2);
+            background: rgba(0, 39, 91, 0.2);
         }
 
         .hero-bright-ver .scroll-line::after {
@@ -93,24 +94,94 @@
             animation: fadeInUp 1.2s ease-out forwards;
         }
 
+        /* イントロロゴ用アニメーション定義 */
+        .hero-intro-logo {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 320px;
+            opacity: 0;
+            z-index: 0;
+            /* メインコンテンツの背面に配置 */
+            animation: introLogoMove 3.5s ease-in-out forwards;
+            pointer-events: none;
+        }
+
+        @keyframes introLogoMove {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -40%) scale(1.1);
+            }
+
+            15% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            40% {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+
+            60% {
+                opacity: 0;
+                transform: translate(-50%, -30%) scale(1.15);
+            }
+
+            80% {
+                opacity: 0;
+                transform: translate(-50%, 450%) scale(4);
+
+            }
+
+            95% {
+                opacity: 0.1;
+                /* テキストの邪魔にならないようさらに薄く */
+                transform: translate(-50%, 500%) scale(4.5);
+                /* セクションの下辺ギリギリ、あるいは少しはみ出るくらいの位置まで下げる */
+            }
+
+            100% {
+                opacity: 0.1;
+                transform: translate(-50%, 500%) scale(4.5);
+            }
+        }
+
         .hero-bright-ver .hero-special-logo {
-            animation-delay: 1.5s;
-            /* 最初にロゴが表示されるよう設計 */
+            animation-delay: 2s;
+            /* イントロロゴが動き出すタイミングで表示開始 */
         }
 
         .hero-bright-ver .hero-title {
-            animation-delay: 3s;
-            /* ロゴの後にメインコピーを表示 */
+            animation-delay: 2.3s;
+            line-height: 1.2;
+            /* 大きな文字に合わせた行間調整 */
+        }
+
+        /* 100周年アクセントスタイル */
+        .hero-title-main {
+            display: inline;
+        }
+
+        .hero-title-accent {
+            display: inline-block;
+            font-size: 200%;
+            /* 約2倍 */
+            color: #c4a77d;
+            font-style: italic;
+            margin-right: 0.05em;
+            vertical-align: baseline;
+            /* 下揃え */
+            line-height: 1;
         }
 
         .hero-bright-ver .hero-subtitle {
-            animation-delay: 3s;
-            /* タイトルと同時に表示（お好みで調整可） */
+            animation-delay: 2.5s;
         }
 
         .hero-bright-ver .hero-actions {
-            animation-delay: 3s;
-            /* 最後にボタン類を表示 */
+            animation-delay: 2.8s;
         }
     </style>
 </head>
@@ -145,12 +216,17 @@
                     <canvas id="hero-particles"></canvas>
                 </div>
                 <div class="hero-content">
+                    <!-- イントロアニメーションロゴ -->
+                    <div class="hero-intro-logo">
+                        <img src="images/logos/logo_mt_nv.svg" alt="Lunaire Logo" style="width: 100%; height: auto;">
+                    </div>
                     <div class="hero-special-logo">
                         <img src="images/logos/logo_100_navy.svg" alt="100th Anniversary Logo"
                             class="anniversary-logo-img">
                     </div>
                     <h1 class="hero-title">
-                        <span class="hero-title-main">100年の歩み、<br>これからの未来へ。</span>
+                        <span class="hero-title-main"><span
+                                class="hero-title-accent">100</span>年の歩み、<br>これからの未来へ。</span>
                     </h1>
                     <p class="hero-subtitle">
                         株式会社ルナールは、皆さまに支えられ大きな節目を迎えました。<br>
@@ -203,12 +279,16 @@
                         style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: url('images/bg-future.webp') center/cover no-repeat; opacity: 0; transition: opacity 0.5s ease; z-index: 3;">
                     </div>
                     <div class="parallax-overlay"
-                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(225, 225, 225, 0.7); z-index: 10;">
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(225, 225, 225, 0.85); z-index: 10;">
+                    </div>
+                    <!-- セクション上部のグラデーション (白60% -> 白0%) -->
+                    <div class="parallax-top-gradient"
+                        style="position: absolute; top: 0; left: 0; width: 100%; height: 300px; background: linear-gradient(to bottom, rgba(255, 255, 255, 0.83) 0%, rgba(255, 255, 255, 0) 100%); z-index: 11;">
                     </div>
                 </div>
 
                 <div class="container" style="position: relative; z-index: var(--z-content);">
-                    <div class="section-header">
+                    <div class="section-header fade-in-up">
                         <h2 class="section-title">紡いできた一世紀</h2>
                         <p class="section-subtitle">ルナールの歩み</p>
                     </div>
@@ -229,16 +309,17 @@
                                     <div class="timeline-year">1925<span>年</span></div>
                                     <h3 class="timeline-heading">「綿宗ふとん店」として創業</h3>
                                     <p class="timeline-text">
-                                        京都府伏見にて創業。綿布団を中心とした寝具の製造・販売を開始。<br>誠実なものづくりを第一に、長年受け継がれる品質の基礎を築く。
+                                        京都府伏見にて創業。綿布団を中心とした寝具の製造・販売を開始。誠実なものづくりを第一に、長年受け継がれる品質の基礎を築く。
                                     </p>
                                     <div class="timeline-image">
-                                        <img src="images/showaimage.webp" alt="創業時の写真" style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 1rem;">
+                                        <img src="images/showaimage.webp" alt="創業時の写真"
+                                            style="width: 100%; height: auto; border-radius: 4px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); margin-top: 1rem;">
                                     </div>
                                 </div>
                             </div>
                             <div class="timeline-visual-deco">
-                                <span class="deco-title">【大正】和の伝統寝具</span>
-                                それまで高級だった綿布団が一般に普及。畳にそば殻枕と木綿の和布団を敷き、昼は収納する合理的な生活でした。
+                                <span class="deco-title">【大正】綿布団の普及</span>
+                                高価な綿布団が都市部から徐々に広まり、藁布団からの転換が進んだ時期。押入れの普及とともに、布団を畳んで収納する生活習慣が定着していきました。
                             </div>
                         </div>
 
@@ -256,8 +337,8 @@
                                 </div>
                             </div>
                             <div class="timeline-visual-deco">
-                                <span class="deco-title">【昭和】洋式化と羽毛の普及</span>
-                                高度経済成長とともにベッド文化が浸透。軽量で保温性に優れた「羽毛ふとん」が登場した寝具の転換期。
+                                <span class="deco-title">【昭和】一般家庭への定着と多様化</span>
+                                高度経済成長期を経て、綿布団が全国の家庭に完全に普及。後期にはベッド文化の浸透とともに、軽量な羽毛布団という新たな選択肢が加わりました。
                             </div>
                         </div>
 
@@ -277,8 +358,8 @@
                                 </div>
                             </div>
                             <div class="timeline-visual-deco">
-                                <span class="deco-title">【平成】「快眠」へのこだわり</span>
-                                質の高い睡眠への関心が高まり、高機能素材が台頭。個々の体型に合わせた快眠環境の追求が始まりました。
+                                <span class="deco-title">【平成】機能性の追求と新素材</span>
+                                ウレタンや合成繊維といった新素材が登場し、体圧分散などの機能性が重視されるように。睡眠を健康管理の一環と捉える意識が強まった時代です。
                             </div>
                         </div>
 
@@ -295,8 +376,8 @@
                                 </div>
                             </div>
                             <div class="timeline-visual-deco">
-                                <span class="deco-title">【令和】テクノロジーの融合</span>
-                                AIや最新テクノロジーを活用し、眠りを科学。健康を支えるインフラとして、寝具はさらに進化し続けます。
+                                <span class="deco-title">【令和】多様なスタイルへの最適化</span>
+                                培われた知見と素材技術を活かし、個々のライフスタイルや体型に合わせた製品を展開。一人ひとりに寄り添う、より質の高い眠りを追求し続けています。
                             </div>
                         </div>
                     </div>
@@ -306,14 +387,15 @@
             <!-- Feature Section: 強み・こだわり -->
             <section id="feature" class="feature-section section-padding">
                 <div class="container">
-                    <div class="section-header">
+                    <div class="section-header fade-in-up">
                         <h2 class="section-title">これからの100年。変わらぬこだわり</h2>
                         <p class="section-subtitle">ルナールの強みと、未来への約束</p>
                     </div>
                     <div class="feature-grid">
                         <div class="feature-card fade-in-up">
                             <div class="feature-image-wrapper">
-                                <div class="feature-image-placeholder" style="background-image: url('images/mattress-topper-2.webp');"></div>
+                                <div class="feature-image-placeholder"
+                                    style="background-image: url('images/mattress-topper-2.webp');"></div>
                                 <div class="feature-icon"><span>01</span></div>
                             </div>
                             <div class="feature-content">
@@ -323,7 +405,8 @@
                         </div>
                         <div class="feature-card fade-in-up">
                             <div class="feature-image-wrapper">
-                                <div class="feature-image-placeholder" style="background-image: url('images/42.webp');"></div>
+                                <div class="feature-image-placeholder" style="background-image: url('images/42.webp');">
+                                </div>
                                 <div class="feature-icon"><span>02</span></div>
                             </div>
                             <div class="feature-content">
@@ -455,10 +538,13 @@
                     rootMargin: '0px 0px -50px 0px'
                 });
 
-                // 監視対象の登録（リクルートセクション + フェードイン要素）
-                // タイムライン要素は個別のスクロール描画ロジックで制御するため除外
-                const animatedElements = document.querySelectorAll('.recruitment-section, .message-section .fade-in-up, .feature-card.fade-in-up, .vision-section .fade-in-up');
-                animatedElements.forEach(el => observer.observe(el));
+                // 監視対象の登録（フェードイン要素全般）
+                // タイムラインの「線に連動する要素（ラベルやアイテム）」以外を登録。
+                // ヘッダータイトル（.section-header）は視界に入った瞬間に表示させる。
+                const animatedElements = document.querySelectorAll('.recruitment-section, .fade-in-up:not(.timeline-container *)');
+                animatedElements.forEach(el => {
+                    observer.observe(el);
+                });
 
                 // --- Zzz Bubble 粒子アニメーション ---
                 const canvas = document.getElementById('hero-particles');
@@ -569,11 +655,7 @@
                              * 背景写真の明確な切り替え
                              * スクロール位置に合わせて 1枚ずつ表示させ、重なり期間を最短にします。
                              */
-                            if (progress < 0.1) {
-                                layers[0].style.opacity = 0;
-                                layers[1].style.opacity = 0;
-                                layers[2].style.opacity = 0;
-                            } else if (progress < 0.45) {
+                            if (progress < 0.45) {
                                 layers[0].style.opacity = 1;
                                 layers[1].style.opacity = 0;
                                 layers[2].style.opacity = 0;
@@ -581,14 +663,10 @@
                                 layers[0].style.opacity = 0;
                                 layers[1].style.opacity = 1;
                                 layers[2].style.opacity = 0;
-                            } else if (progress < 0.85) {
-                                layers[0].style.opacity = 0;
-                                layers[1].style.opacity = 0;
-                                layers[2].style.opacity = 1;
                             } else {
                                 layers[0].style.opacity = 0;
                                 layers[1].style.opacity = 0;
-                                layers[2].style.opacity = 0;
+                                layers[2].style.opacity = 1;
                             }
                         }
                     });
@@ -622,6 +700,7 @@
 
                     // 各ラベルの表示判定
                     eraLabels.forEach(label => {
+                        // 線の先端がラベルの数ピクセル手前に来たら表示
                         if (currentLineHeight >= label.offsetTop - 5) {
                             label.classList.add('is-visible');
                         }
@@ -629,7 +708,8 @@
 
                     // 各アイテム（カード）の表示判定
                     timelineItems.forEach(item => {
-                        if (currentLineHeight >= item.offsetTop + 40) {
+                        // 線の先端がドットの位置（カード上端から約25px下）に到達したら表示
+                        if (currentLineHeight >= item.offsetTop + 25) {
                             item.classList.add('is-visible');
                         }
                     });
@@ -659,7 +739,7 @@
                         }
 
                         currentY += (targetY - currentY) * lerpFactor;
-                        
+
                         // 微小な浮遊感（サイン波）を合成
                         const floatY = Math.sin(time * 0.8) * 10;
                         const scale = 1 + Math.sin(time * 0.5) * 0.02;
