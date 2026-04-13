@@ -1,0 +1,6 @@
+[Browsersync] Access URLs:
+ ---------------------------------
+    Local: http://localhost:3000
+ External: http://192.168.1.3:3000
+ ---------------------------------
+[Browsersync] Serving files from: local-dev

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100th Anniversary | Lunaire</title>
+
+    <!-- Fonts (ポップな丸ゴシックと英字) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&family=Nunito:wght@400;800&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- 華やかな装飾（常時フワフワ浮遊する） -->
+    <div class="bg-deco-wrap">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+        <div class="particle p-1"></div>
+        <div class="particle p-2"></div>
+        <div class="particle p-3"></div>
+    </div>
+
+    <!-- ヘッダーなしのLP構成で没入感を高める -->
+
+    <main>
+        <!-- Hero Section (巨大な角丸枠のビデオビュー) -->
+        <section class="hero">
+            <div class="hero-video-window">
+                <video autoplay muted loop playsinline>
+                    <source src="videos/hero-bg.mp4" type="video/mp4">
+                </video>
+                <div class="hero-video-overlay"></div>
+            </div>
+            
+            <div class="hero-content">
+                <div class="hero-logo js-float">
+                    <img src="images/logos/logo_100_navy.svg" alt="100th Anniversary">
+                </div>
+                <h1 class="hero-title pt-title">おかげさまで100周年！</h1>
+                <div class="hero-subtitle">これからの未来へ。</div>
+            </div>
+        </section>
+
+        <!-- Message -->
+        <section class="section-pad container t-center">
+            <div class="soft-card js-bounce js-float">
+                <h2 class="sect-title" style="color: var(--c-coral);">ありがとう、100年の歩み</h2>
+                <p style="font-size: 1.2rem; line-height: 2;">
+                    大正14年の創業から、私たちはひたむきに「眠りの質」を追求し続けてきました。<br>
+                    皆様の支えがあってこその大きな節目です。<br>
+                    これからも、健やかな眠りと笑顔をお届けできるよう、<br>
+                    ワクワクするものづくりに挑戦し続けます！
+                </p>
+            </div>
+        </section>
+
+        <!-- Timeline (UPVEGEライクな柔らかいカード) -->
+        <section class="section-pad container">
+            <h2 class="sect-title t-center js-bounce" style="width:100%;">LUNAIRE HISTORY</h2>
+
+            <div class="timeline-card js-bounce">
+                <div class="cute-badge">創業期</div>
+                <div class="tl-img">
+                    <img src="images/showaimage.webp" alt="創業時の様子">
+                </div>
+                <div class="tl-info">
+                    <div class="tl-year">1925</div>
+                    <h3 class="tl-title">始まりは「綿宗ふとん店」から</h3>
+                    <p>京都府伏見にて創業。誠実なものづくりを第一に、長年受け継がれる品質の基礎を築きました。</p>
+                </div>
+            </div>
+
+            <div class="timeline-card js-bounce delay-100">
+                <div class="cute-badge" style="background:var(--c-gold); color:var(--c-navy);">成長期</div>
+                <div class="tl-img">
+                    <img src="images/bg-growth.webp" alt="流通の拡大">
+                </div>
+                <div class="tl-info">
+                    <div class="tl-year">1962</div>
+                    <h3 class="tl-title">日本中のご家庭へ</h3>
+                    <p>株式会社として設立。寝具専門店などを中心とした流通網を大きく拡充し、多様なニーズに応える力をつけました。</p>
+                </div>
+            </div>
+
+            <div class="timeline-card js-bounce delay-200">
+                <div class="cute-badge" style="background:var(--c-coral);">これから</div>
+                <div class="tl-img">
+                    <img src="images/bg-future.webp" alt="さらなる進化">
+                </div>
+                <div class="tl-info">
+                    <div class="tl-year">NOW!!</div>
+                    <h3 class="tl-title">未来の「睡眠」を創造する</h3>
+                    <p>伝統技術と最新テクノロジーを融合し、「ただ休むため」ではなく「健康を実現する環境」への提供を目指します。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features (浮遊する丸いバブル) -->
+        <section class="section-pad container">
+            <h2 class="sect-title t-center js-bounce" style="width:100%;">OUR PROMISE</h2>
+            
+            <div class="features-wrap">
+                <div class="feat-bubble js-bounce">
+                    <div class="feat-img-circle">
+                        <img src="images/mattress-topper-2.webp" alt="素材の追求">
+                    </div>
+                    <h3>厳選素材と職人技術</h3>
+                    <p style="margin-top:16px;">高品質なガーゼやダウンの魅力を引き出し、熟練の技術で最高の快適さを追求します。</p>
+                </div>
+                
+                <div class="feat-bubble js-bounce delay-100">
+                    <div class="feat-img-circle">
+                        <img src="images/42.webp" alt="柔軟なアイデア">
+                    </div>
+                    <h3>柔軟なアイデア</h3>
+                    <p style="margin-top:16px;">ライフスタイルの変化に合わせ、新しい睡眠環境のワクワクするアイデアを提案します。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recruitment / Footer Card -->
+        <section class="footer-card container js-bounce">
+            <span style="font-family:var(--font-accent); font-weight:900; font-size:1.5rem; display:block; margin-bottom:16px; color:var(--c-gold);">JOIN US!</span>
+            <h2 style="font-size: clamp(2rem, 4vw, 3rem); margin-bottom:24px;">これからの100年を、共に。</h2>
+            <p style="margin-bottom: 40px; font-weight:700;">情熱を持って未来に挑戦する、新しい仲間を求めています。</p>
+            <a href="#" class="btn-pop">採用情報をみる！</a>
+            
+            <p style="margin-top: 80px; font-size:12px; opacity:0.8;">&copy; Lunaire Co.,Ltd. All Rights Reserved.</p>
+        </section>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -148,7 +148,7 @@ h6 {
 
 
 /* モックアップ用の一時的なヘッダースタイル（初期は隠し、スクロールで表示） */
-.site-header {
+.anniv100th-header {
 
     position: fixed;
     top: 0;
@@ -166,7 +166,7 @@ h6 {
 
 
 /* スクロール時に付与されるクラス（衝突回避のため名称変更） */
-.site-header.is-header-active {
+.anniv100th-header.is-header-active {
 
     transform: translateY(0) !important;
 }
@@ -181,7 +181,7 @@ h6 {
 }
 
 
-.site-logo {
+.anniv100th-logo {
 
     font-weight: 700;
     font-size: 1.5rem;

@@ -1,4 +1,4 @@
-/* Scoped: global.css | Wrapper: #anniv100th | 2026/4/8 14:01:38 */
+/* Scoped: global.css | Wrapper: #anniv100th | 4/13/2026, 3:28:48 PM */
 /* Scoped: global.css | Wrapper: | 2026/3/27 10:55:35 */
 /* Reset & Base */
 * {
@@ -179,7 +179,7 @@ body {
 
 
 /* モックアップ用の一時的なヘッダースタイル（初期は隠し、スクロールで表示） */
-#anniv100th .site-header {
+#anniv100th .anniv100th-header {
 
 
     position: fixed;
@@ -199,7 +199,7 @@ body {
 
 
 /* スクロール時に付与されるクラス（衝突回避のため名称変更） */
-#anniv100th .site-header.is-header-active {
+#anniv100th .anniv100th-header.is-header-active {
 
 
     transform: translateY(0) !important;
@@ -218,7 +218,7 @@ body {
 
 
 
-#anniv100th .site-logo {
+#anniv100th .anniv100th-logo {
 
 
     font-weight: 700;

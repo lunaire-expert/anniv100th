@@ -55,7 +55,7 @@
             /* 白背景での視認性向上のためシャドウを除去 */
         }
 
-        .hero-bright-ver .anniversary-logo-img {
+        .hero-bright-ver .anniv100th-logo-img {
             /* 紺ロゴの存在感を際立たせる影の強さ */
             filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
         }
@@ -194,9 +194,9 @@
 <body>
     <div id="anniv100th">
         <!-- ヘッダー（既存サイトから流用想定のモックアップ） -->
-        <header class="site-header">
+        <header class="anniv100th-header">
             <div class="header-inner">
-                <div class="site-logo">
+                <div class="anniv100th-logo">
                     <img src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/logos/logo_mt_nv.svg" alt="Lunaire"
                         style="height: 32px; width: auto; vertical-align: middle;">
                 </div>
@@ -227,7 +227,7 @@
                     </div>
                     <div class="hero-special-logo">
                         <img src="<?php echo get_stylesheet_directory_uri(); ?>/anniv100th/images/logos/logo_100_navy.svg" alt="100th Anniversary Logo"
-                            class="anniversary-logo-img">
+                            class="anniv100th-logo-img">
                     </div>
                     <h1 class="hero-title">
                         <span class="hero-title-main"><span
@@ -499,7 +499,7 @@
         </main>
 
         <!-- Footer: フッターエリア -->
-        <footer class="site-footer" style="padding: 2rem; background: #333; color: #fff; text-align: center;">
+        <footer class="anniv100th-footer" style="padding: 2rem; background: #333; color: #fff; text-align: center;">
             <p>&copy; Lunaire Co.,Ltd. All Rights Reserved.</p>
         </footer>
 
@@ -522,7 +522,7 @@
                  * ヘッダーの表示・非表示制御（スクロールで出現）
                  */
                 const wrapper = document.getElementById('anniv100th');
-                const header = wrapper.querySelector('.site-header');
+                const header = wrapper.querySelector('.anniv100th-header');
                 window.addEventListener('scroll', () => {
                     if (window.scrollY > 80) {
                         header.classList.add('is-header-active');
